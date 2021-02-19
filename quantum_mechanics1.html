@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <script>
+        MathJax = {
+            chtml: {
+                matchFontHeight: false
+            },
+            tex: {
+                inlineMath: [['$', '$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <title>量子力学1</title>
+</head>
+
+<body>
+    <h1>量子力学で何が分かるか</h1>
+    <p>人類はミクロなスケールにおいて未来を完全に予言することを諦め、ある程度のランダムさを理論の中に組み込むことを認めた。<br>
+    ではどこまで予言できるのか。以下の2つのことを予言できる。
+    <ol>
+        <li>一つの測定の結果$a^{(n)}$を予言することはできないが、その結果が一組の値$\{a^{(0)},a^{(1)},a^{(2)},...\}$に属することを予言できる。</li>
+        <li>また、その測定の結果が$a^{(n)}$である確率$P(a^{(n)})$を予言することができる。あるいは同じことであるが、同じ実験を十分多数回繰り返して行った際、測定の結果が$P(a^{(n)})$となる回数の割合を予言できる。
+        </li>
+    </ol>
+    </p>
+    <h1>量子力学の要請</h1>
+    <p>量子力学では以下の5つの要請を無条件に認める。
+    <ol>
+        <li>状態は複素ヒルベルト空間上の規格化されたベクトル$|\psi\rangle$で表される。</li>
+        <li>物理量は複素ヒルベルト空間錠の自己共役演算子$\widehat{A}$によって表される。</li>
+        <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（理想測定）、<br>
+            測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a^{(n)}$として得られる。<br>
+            どの固有値になるかを完全に予言することはできず、ある程度ランダムである。<br>
+            観測により、ある測定値$a^{(n)}$が得られる確率$P(a^{(n)})$は、$a^{(n)}$に対応する固有ベクトルの張る空間への状態ベクトル$|\psi\rangle$の射影の長さの二乗で与えられる。縮退がない場合には固有ベクトルを$|a^{(n)}\rangle$として、以下の通りとなる。</li>
+            \[
+            P\left( a^{(n)}\right) = \langle \psi | \widehat{P}\left( a^{(n)}\right) | \psi \rangle = \langle \psi |a^{(n)} \rangle \langle a^{(n)}|\psi \rangle = \left| \langle a^{(n)} | \psi \rangle \right| ^{2}
+            \]
+        <li>物理量$\widehat{A}$の時間発展はハミルトニアン演算子を$\widehat{H}$として、以下のハイゼンベルク方程式に従う。
+            \[
+            i\hbar \dfrac{d\widehat{A}}{dt}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
+            \]
+            なお、上記では物理量が時間発展すると考えているが、状態ベクトル$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。その場合は下記のシュレディンガー方程式に従うと考える。
+            \[
+            i\hbar \dfrac{d}{dt}| \psi \rangle = \widehat{H}| \psi \rangle
+            \]
+        </li>
+        <li>測定の直前に$|\psi\rangle$であった系に、物理量$\widehat{A}$の理想測定を行い、<br>
+            測定値$a^{(n)}$が得られたとすると、測定直後の状態ベクトル$|\phi\rangle$は以下のようになる。これを射影仮説と呼ぶ。
+            \[
+            | \phi \rangle = \dfrac{1}{ \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right| }\widehat{P}\left( a^{(n)}\right) | \psi \rangle
+            \]
+            縮退がない場合は$|\phi\rangle = |a^{(n)} \rangle$となる。
+        </li>
+    </ol>
+    </p>
+    <h1>座標と運動量の間の交換法則</h1>
+    <p>座標$q$に依存し、時間に依存しないポテンシャル$V(q)$のもとに運動する1粒子の運動を考える。その全エネルギーは
+        \[
+        H=\dfrac{1}{2}m\dot{q}^{2}+V\left( q\right)
+        \]
+        となる。ここで、 $\dot{q}=\dfrac{dq}{dt}$である。演算子であることを強調するハット$\widehat{}$を省略しているが、$H, q, \dot{q}$はすべて演算子であることに注意する。<br>
+    </p>
+    <p>ここで、$q$をハイゼンベルク方程式に$A=q$として代入すると、
+       
+        \[
+        i\hbar \dfrac{dq}{dt}=qH-Hq
+        \]
+        であり、地道に計算すると
+        \[
+        i\hbar \dot{q} = \frac{1}{2}m(q\dot{q}^2-\dot{q}^2q)
+        \]
+        となる。天下り的だが、右辺に$\frac{1}{2}\dot{q}q\dot{q}-\frac{1}{2}\dot{q}q\dot{q}$を足して項をまとめると、
+        \[
+        i\hbar \dot{q} = \frac{1}{2}m(q\dot{q}-\dot{q}q)\dot{q}+\frac{1}{2}m\dot{q}(q\dot{q}-\dot{q}q)
+        \]
+        とできる。運動量を$p=m\dot{q}$としたとき、座標$q$と運動量$p$が満たすべき関係式を上の式より以下のように見出すことができる。
+        \[
+        qp-pq = i \hbar I
+        \]
+        右辺を単に$i\hbar$と書かれることも多いが、右辺も演算子であるので、これを強調して恒等演算子$I$をかけている。
+        このように、$AB-BA=i\hbar I$となる関係を正準交換関係と呼ぶ。<br>
+        また、$AB-BA$という演算そのものを交換子と呼ぶ。交換子自身も演算子である。
+    </p>
+    
+</body>
+
+</html>
