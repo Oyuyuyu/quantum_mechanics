@@ -36,7 +36,7 @@
         <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（理想測定）、<br>
             測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a^{(n)}$として得られる。<br>
             どの固有値になるかを完全に予言することはできず、ある程度ランダムである。<br>
-            観測により、ある測定値$a^{(n)}$が得られる確率$P(a^{(n)})$は、$a^{(n)}$に対応する固有ベクトルの張る空間への状態ベクトル$|\psi\rangle$の射影の長さの二乗で与えられる。これをボルンの規則と呼ぶ。縮退がない場合には固有ベクトルを$|a^{(n)}\rangle$として、以下の通りとなる。</li>
+            観測により、ある測定値$a^{(n)}$が得られる確率$P(a^{(n)})$は、$a^{(n)}$に対応する固有ベクトルの張る空間を考え、この空間への状態ベクトル$|\psi\rangle$の射影を取り、この射影の長さを二乗することで得られる。これをボルンの規則と呼ぶ。縮退がない場合には射影演算子を$\widehat{P}\left( a^{(n)}\right)$、固有ベクトルを$|a^{(n)}\rangle$として以下の通りとなる。</li>
             \[
             P\left( a^{(n)}\right) = \langle \psi | \widehat{P}\left( a^{(n)}\right) | \psi \rangle = \langle \psi |a^{(n)} \rangle \langle a^{(n)}|\psi \rangle = \left| \langle a^{(n)} | \psi \rangle \right| ^{2}
             \]
@@ -58,7 +58,72 @@
         </li>
     </ol>
     </p>
-    <h1>座標と運動量の間の交換法則</h1>
+    <h1>正準量子化</h1>
+    <h2>正準量子化の手続き（1次元1粒子の場合）</h2>
+    <p>
+        上記の5つの要請は物理量$\widehat{A}$の具体的な形を与えてくれない。具体的な形は自然を観察することによって推定するしかないのだが、幸いなことに古典力学にて見いだされた物理量$A$に関しては以下の手続きにより多くの場合うまくいくことが経験的に知られている。<br>
+    </p>
+    <p>
+        簡単のために1次元1粒子の場合を考える。形を決めたい物理量$A$が、ハミルトン形式の古典力学において、一般化座標$q$と一般化運動量$p$の関数として表されるとする。
+        \[
+        A = A\left(p,q\right)
+        \]
+        このような物理量の$p$と$q$を、以下のような関係を満たす自己共役演算子$\widehat{p}$と$\widehat{q}$に置き換える。
+        \[
+        \widehat{q}\widehat{p}-\widehat{p}\widehat{q} = i\hbar\widehat{I}
+        \]
+        ここで、$\widehat{I}$は恒等演算子である。右辺を単に$i\hbar$とすることもあるが、右辺も演算子であることを強調するために$\widehat{I}$をかけている。また、このような関係の成り立つ$\widehat{p}$と$\widehat{q}$は正準交換関係にあると言う。<br>
+        </p>
+        <p>
+        これにより、古典物理学における物理量$A\left( p,q\right)$は
+        \[
+        \widehat{A} = \widehat{A}\left(\widehat{p},\widehat{q}\right)
+        \]
+        という演算子になる。古典物理学では実数であった量$A$を自己共役演算子$\widehat{A}$に変換したのだと強調しておく。
+    </p>
+    <p>
+        ただし、上記の手続きを行う前に、得られる$\widehat{A}$が自己共役演算子となるように$q$と$p$を配置しておく。具体例としては、古典論において
+        \[
+        A = qp
+        \]
+        という量を考える際に、単純に$q$と$p$を置き換えると、演算子$\widehat{A}$は
+        \[
+        \widehat{A} = \widehat{q}\widehat{p}
+        \]
+        となる。この量の共役を取ると、
+        \[
+        \widehat{A}^\dagger = \left( \widehat{q}\widehat{p} \right)^\dagger = \widehat{p}^\dagger \widehat{q}^\dagger = \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - i\hbar\widehat{I}
+        \]
+        よって
+        \[
+        \widehat{A}^\dagger \neq \widehat{A} 
+        \]
+        となり、共役が自身に一致していない。すなわち、$\widehat{A}$は自己共役演算子ではないので量子力学の要請に反してしまう。
+    </p>
+    <p>
+        ではどうすればよいかと言うと、例えば$A$を
+        \[
+        A = qp = \frac{1}{2}\left( qp + pq \right)
+        \]
+        と変形してから、$p$と$q$を$\widehat{p}$と$\widehat{q}$に置き換えれば
+        \begin{align}
+        \widehat{A} &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right) \\
+
+        \widehat{A}^\dagger &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)^\dagger = \frac{1}{2} \left( \widehat{p}^\dagger\widehat{q}^\dagger + \widehat{q}^\dagger\widehat{p}^\dagger \right) 
+        = \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)
+        \end{align}
+        よって、
+        \[
+        \widehat{A}^\dagger = \widehat{A} 
+        \]
+        となり、共役が自身に一致する。すなわち、$\widehat{A}$は自己共役演算子となり、量子力学の要請を満たす$\widehat{A}$が得られたことになる。ハミルトニアン演算子$\widehat{H}$も同様の手続きによって得ることができ、これによりハイゼンベルク方程式の具体的な形が決まる。
+        このハイゼンベルク方程式に適当な初期条件を与えることで、その系のある時刻において物理量$A$を測定した際に、測定値$a^{(n)}$が得られる確率を予言することができる。
+        <h2>正準量子化の手続き（多次元他粒子の場合）</h2>
+        <h2>正準量子化の落とし穴</h2>
+        <h2>交換関係とポアソン括弧</h2>
+        続きはまた後日
+    </p>
+    <!--
     <p>簡単のため、まずは一次元で考える。座標$q$に依存するポテンシャル$V(q)$のもとに運動する1粒子の運動を考える。この系の全エネルギーは
         \[
         H=\dfrac{1}{2}m\dot{q}^{2}+V\left( q\right)
@@ -100,7 +165,7 @@
         \[
         H=\dfrac{1}{2}m(\dot{q}_1^{2}+\dot{q}_2^{2}+\dot{q}_3^{2})+V\left( q_1,\ q_2,\ q_3\right)
         \]
-    </p>
+    </p> -->
     <p>続きは後日</p>
     
 </body>
