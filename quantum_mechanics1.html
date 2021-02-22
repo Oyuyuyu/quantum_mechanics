@@ -264,19 +264,19 @@
     <p>
         行列$A\left( t \right)$の時間発展のもう少し具体的な形を考えたい。時間発展はハイゼンベルク方程式
         \[
-        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=AH-HA
+        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=A\left( t \right)H\left( t \right)-H\left( t \right)A\left( t \right)
         \]
         により与えられるのだった。この方程式は簡単に解けて、
         \[
-        A\left( t \right) = \exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})
+        A\left( t \right) = \exp(\frac{iH\left( t \right)t}{\hbar})A\left( t_0 \right)\exp(\frac{-iH\left( t \right)t}{\hbar})
         \]
         とできる。ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
     <p>
-        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
+        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H\left( t \right)$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
         \begin{aligned}
             A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
-                     &= \mel*{\phi^{(i)}}{\exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})}{\phi_{(j)}} \\
+                     &= \mel*{\phi^{(i)}}{\exp(\frac{iH\left( t \right)t}{\hbar})A\left( t_0 \right)\exp(\frac{-iH\left( t \right)t}{\hbar})}{\phi_{(j)}} \\
                      &=  \mel*{\phi^{(i)}}{A\left( t_0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t) \\
                      &= A^i_j(t_0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t)
         \end{aligned}
