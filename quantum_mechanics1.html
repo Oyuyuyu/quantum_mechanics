@@ -268,17 +268,17 @@
         \]
         により与えられるのだった。この方程式は簡単に解けて、
         \[
-        A\left( t \right) = \exp(\frac{iHt}{\hbar})A\left( 0 \right)\exp(\frac{-iHt}{\hbar})
+        \exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left( t-t_0\right))
         \]
-        とできる。ここでいう$\exp(X)$は行列であることを強調しておく。
+        とできる。ある基準となる時刻を$t_0$とした。また、ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
     <p>
         あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
         \begin{aligned}
             A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
-                     &= \mel*{\phi^{(i)}}{\exp(\frac{iHt}{\hbar})A\left( 0 \right)\exp(-\frac{iHt}{\hbar})}{\phi_{(j)}} \\
-                     &=  \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t) \\
-                     &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t)
+                     &= \mel*{\phi^{(i)}}{\exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left( t-t_0\right))}{\phi_{(j)}} \\
+                     &=  \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right)) \\
+                     &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right))
         \end{aligned}
         と書ける。行列要素が振動型の時間発展をし、その振動数はエネルギー$\left( E^{(i)}-E^{(j)}\right)$に比例する。歴史的には上記の議論を逆に辿っており、
         ハイゼンベルクはこの行列要素の振動型の時間発展を分光学の実験結果と電子の軌道運動のフーリエ級数展開から見いだし、ハイゼンベルク方程式にたどり着いたという（より正確には行列の形式に整備して完成させたのはボルンとヨルダンである）。
