@@ -264,25 +264,35 @@
     <p>
         行列$A\left( t \right)$の時間発展のもう少し具体的な形を考えたい。時間発展はハイゼンベルク方程式
         \[
-        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=A\left( t \right)H\left( t \right)-H\left( t \right)A\left( t \right)
+        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=A\left( t \right)H-HA\left( t \right)
         \]
         により与えられるのだった。この方程式は簡単に解けて、
         \[
-        A\left( t \right) = \exp(\frac{iH\left( t \right)t}{\hbar})A\left( t_0 \right)\exp(\frac{-iH\left( t \right)t}{\hbar})
+        A\left( t \right) = \exp(\frac{iHt}{\hbar})A\left( 0 \right)\exp(\frac{-iHt}{\hbar})
         \]
         とできる。ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
     <p>
-        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H\left( t \right)$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
+        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
         \begin{aligned}
             A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
-                     &= \mel*{\phi^{(i)}}{\exp(\frac{iH\left( t \right)t}{\hbar})A\left( t_0 \right)\exp(\frac{-iH\left( t \right)t}{\hbar})}{\phi_{(j)}} \\
-                     &=  \mel*{\phi^{(i)}}{A\left( t_0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t) \\
-                     &= A^i_j(t_0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t)
+                     &= \mel*{\phi^{(i)}}{\exp(\frac{iHt}{\hbar})A\left( 0 \right)\exp(-\frac{iHt}{\hbar})}{\phi_{(j)}} \\
+                     &=  \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t) \\
+                     &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t)
         \end{aligned}
         と書ける。行列要素が振動型の時間発展をし、その振動数はエネルギー$\left( E^{(i)}-E^{(j)}\right)$に比例する。歴史的には上記の議論を逆に辿っており、
         ハイゼンベルクはこの行列要素の振動型の時間発展を分光学の実験結果と電子の軌道運動のフーリエ級数展開から見いだし、ハイゼンベルク方程式にたどり着いたという（より正確には行列の形式に整備して完成させたのはボルンとヨルダンである）。
+    </p>
+    <p>
+        ここで一つ注釈しておく。ハイゼンベルク方程式に$A=H$を代入すると、$\frac{\mathrm{d}}{dt}H = 0$となる。
+        これはエネルギー保存則を意味しているわけだが、今までハイゼンベルク方程式と呼んでいた式ではエネルギーの保存しない系を扱えないことも意味している。
+        もちろん、全系を考えればエネルギーは保存するので理論の不完全さを意味するわけではない。それでも、もしエネルギーの保存しない系を扱いたいのであれば、
 
+        \[
+        i\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A} + i\hbar \dfrac{\partial A}{\partial t}
+        \]
+
+        を基礎方程式とすればよいことが知られており、こちらをハイゼンベルク方程式と呼ぶこともある。
     </p>
 </body>
 
