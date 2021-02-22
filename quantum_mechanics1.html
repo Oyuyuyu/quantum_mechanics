@@ -194,7 +194,7 @@
     \[
         \ket{\psi} = \sum_{j}\psi^{(j)}\ket{e_{(j)}}
     \]
-    とできる。$j$成分を$\psi^{(i)}$とした。ここに演算子$\widehat{A}$を作用させると、
+    とできる。$j$成分を$\psi^{(j)}$とした。ここに演算子$\widehat{A}$を作用させると、
     \[
     \widehat{A}\ket{\psi} = \widehat{A}\sum_{j}\psi^{(j)}\ket{e_{(j)}} = \sum_{j}\psi^{(j)} \left( \widehat{A}\ket{e_{(j)}} \right)
    \]
@@ -203,7 +203,8 @@
    \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right)
     = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{(j)} \ket{e_{(i)}} \right)
   \]
-    とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。この成分は$\widehat{A}$由来であって2つの添字で区別される量、つまり$\widehat{A}$の行列表示とみなせる。
+    とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。
+    この成分は$\widehat{A}$由来であって2つの添字で区別される量である。つまり、$\widehat{A}$の行列表示とみなせる。
     また、上の式は行列とベクトルの積の定義そのものの形をしている。すなわち、$\widehat{A}$を$\ket{\psi}$に作用させるということは、
     行列$\widehat{A}$とベクトル$\ket{\psi}$の積を取ることだとみなせる。
 </p>
@@ -267,7 +268,7 @@
         \]
         により与えられるのだった。この方程式は簡単に解けて、
         \[
-        A\left( t_0 \right) = \exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})
+        A\left( t \right) = \exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})
         \]
         とできる。ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
