@@ -200,9 +200,10 @@
    \]
    とできる。ここで、ベクトル$\widehat{A}\ket{e_{(j)}}$をさらに$\ket{e_{(n)}}$で展開すると、
    \[
-   \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right) = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{(j)} \ket{e_{(i)}} \right)
+   \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right)
+    = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{(j)} \ket{e_{(i)}} \right)
   \]
-    とできる。成分を$A^{i}_{j}$とした。この成分は$\widehat{A}$由来であって2つの添字で区別される量、つまり$\widehat{A}$の行列表示とみなせる。
+    とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。この成分は$\widehat{A}$由来であって2つの添字で区別される量、つまり$\widehat{A}$の行列表示とみなせる。
     また、上の式は行列とベクトルの積の定義そのものの形をしている。すなわち、$\widehat{A}$を$\ket{\psi}$に作用させるということは、
     行列$\widehat{A}$とベクトル$\ket{\psi}$の積を取ることだとみなせる。
 </p>
@@ -231,7 +232,7 @@
     \]
     この正規直交基底$\ket{e_{(i)}}$に$\widehat{A}$の固有ベクトル$| a_{(n)} \rangle$を選べば、固有値を$a^{(n)}$として、
     \[
-    A_{ij} = \langle a^{(i)}|\widehat{A}|a_{(j)}\rangle=a^{(j)}\langle a^{(i)}|a_{(j)}\rangle
+    A^i_j = \langle a^{(i)}|\widehat{A}|a_{(j)}\rangle=a^{(j)}\langle a^{(i)}|a_{(j)}\rangle
     =\left \{ \begin{array}{cc} a^{(j)} & (i=j) \\ 0 & (i \ne j) \end{array} \right.
     \]
     となって、以下のような固有値$a^{(n)}$の対角行列が得られる。
