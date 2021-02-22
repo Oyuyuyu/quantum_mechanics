@@ -37,12 +37,12 @@
         <li>物理量はヒルベルト空間上の自己共役演算子$\widehat{A}$によって表される。</li>
         <li>物理量$\widehat{A}$の時間発展は、ハミルトニアン演算子を$\widehat{H}$として以下のハイゼンベルク方程式に従う。
             \[
-            i\hbar \dfrac{d\widehat{A}}{dt}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
+            i\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
             \]
             なお、上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
             その場合は下記のシュレディンガー方程式に従うと考える。
             \[
-            i\hbar \dfrac{d}{dt}| \psi \rangle = \widehat{H}| \psi \rangle
+            i\hbar \dfrac{\mathrm{d}}{\mathrm{d}t}| \psi \rangle = \widehat{H}| \psi \rangle
             \]
         </li>
         <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
@@ -121,13 +121,13 @@
         A = qp = \frac{1}{2}\left( qp + pq \right)
         \]
         と変形してから、$q$と$p$を$\widehat{q}$と$\widehat{p}$に置き換えれば
-        \begin{align}
+        \begin{aligned}
         \widehat{A} &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right) \\
 
         \widehat{A}^\dagger &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)^\dagger
          = \frac{1}{2} \left( \widehat{p}^\dagger\widehat{q}^\dagger + \widehat{q}^\dagger\widehat{p}^\dagger \right) 
         = \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)
-        \end{align}
+        \end{aligned}
         よって、
         \[
         \widehat{A}^\dagger = \widehat{A} 
@@ -137,7 +137,7 @@
         このハイゼンベルク方程式に適当な初期条件を与えることで、その系のある時刻において物理量$A$を測定した際に、
         測定値$a^{(n)}$が得られる確率を予言することができる。
         <h2>正準量子化の手続き（多自由度の場合）</h2>
-        （加筆予定）$\left[ \widehat{q}^{(\alpha)} , \widehat{p}^{(\beta)} \right] = i\hbar\delta^{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
+        （加筆予定）$\left[ \widehat{q}_{\alpha} , \widehat{p}_{\beta} \right] = i\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
         <h2>正準量子化の不完全さ</h2>
         （加筆予定）以上の手続きだけでは$\widehat{A}$の形に不定性が残り、場合によっては現実に合う結果を与えない。
         量子力学が古典力学を包括しているのであり、古典力学から量子力学を完全に類推するには情報量が足りないのは当然である。
@@ -216,7 +216,7 @@
     \[
     \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} = \sum_{i}A^{i}_{j}\braket*{e^{(i)}}{e_{(j)}} = A^{i}_{j}
     \]
-    となり、成分$A^{i}_{j}$の具体的な値を計算できる。この形をを$\widehat{A}$の行列要素と呼ぶ。
+    となり、成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
     </p>
     <p>ここで、$\widehat{A}$を改めて行列として表示しておく。
     \[
@@ -257,19 +257,30 @@
     
     <h1>演算子（=物理量の行列）の時間発展</h1>
     <p>
-        （加筆予定）これまで物理量の演算子にハット$\widehat{ }$をつけて演算子であることを強調してきたが、実際に計算を進めていく上では煩雑であるため、以降省略する。。
+        これまで物理量の演算子にハット$\widehat{ }$をつけて演算子であることを強調してきたが、実際に計算を進めていく上では煩雑であるため、以降省略する。
         また、演算子の表現に具体的なイメージを持って計算を進めるべく、以降断りなく演算子を行列として扱うことがある。<br>
     </p>
     <p>
-        行列$A$の時間発展のもう少し具体的な形を考えたい。時間発展はハイゼンベルク方程式
+        行列$A\left( t \right)$の時間発展のもう少し具体的な形を考えたい。時間発展はハイゼンベルク方程式
         \[
-        i\hbar \dfrac{dA}{dt}=AH-HA
+        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=AH-HA
         \]
         により決まる。この方程式は簡単に解けて、
         \[
-        A = \exp(\frac{iHt}{\hbar})A_0\exp(\frac{-iHt}{\hbar})
+        A\left( t_0 \right) = \exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})
         \]
-        とできる。ここで$A_0$は時刻$t=0$における$L$の値である。ここで言う値とは行列であることを強調しておく。$\exp(X)$も行列であり、べき級数の形になっていると考える。
+        とできる。ここでいう$\exp(X)$は行列であることを強調しておく。
+    </p>
+    <p>
+        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
+        \begin{aligned}
+            A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
+                     &= \mel*{\phi^{(i)}}{\exp(\frac{iHt}{\hbar})A\left( t_0 \right)\exp(\frac{-iHt}{\hbar})}{\phi_{(j)}} \\
+                     &=  \mel*{\phi^{(i)}}{A\left( t_0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t) \\
+                     &= A^i_j(t_0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}t)
+        \end{aligned}
+        と書ける。行列要素が振動型の時間発展をしており、その振動数はエネルギー$\left( E^{(i)}-E^{(j)}\right)$に比例している。歴史的には上記の議論を逆に辿っており、ハイゼンベルクはこの振動型の行列要素の時間発展を分光学の実験結果と電子の軌道運動のフーリエ級数展開から見いだし、ハイゼンベルク方程式にたどり着いたという（より正確には行列の形式に整備して完成させたのはボルンとヨルダンである）。
+
     </p>
 </body>
 
