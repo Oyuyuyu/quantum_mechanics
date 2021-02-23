@@ -3,13 +3,13 @@
 <head>
     <script>
         MathJax = {
-            loader: {load: ['[tex]/physics']},
+            loader: { load: ['[tex]/physics'] },
             chtml: {
                 matchFontHeight: false
             },
             tex: {
                 inlineMath: [['$', '$']],
-                packages: {'[+]': ['physics']}
+                packages: { '[+]': ['physics'] }
             }
         };
     </script>
@@ -21,7 +21,7 @@
 <body>
     <h1>量子力学で何が分かるか</h1>
     <p>人類はミクロなスケールにおいて未来を完全に予言することを諦め、ある程度のランダムさを理論の中に組み込むことを認めた。<br>
-    ではどこまで予言できるのか。以下の2つのことを予言できる。
+        ではどこまで予言できるのか。以下の2つのことを予言できる。
     <ol>
         <li>ある特定の測定の結果として得られる測定値$a^{(n)}$を予言することはできないが、
             その結果が一組の値$\{a^{(0)},\ a^{(1)},\ a^{(2)},...\}$に属することを予言できる。</li>
@@ -47,23 +47,25 @@
         </li>
         <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
             測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a^{(n)}$として得られる。<br>
-            どの固有値になるかを完全に予言することはできず、以下のように確率的にしか分からない。<br>
+            どの固有値になるかを完全に予言することはできず、確率的にしか分からない。<br>
             測定によりある測定値$a^{(n)}$が得られる確率$P(a^{(n)})$は、$a^{(n)}$に対応する固有ベクトルの張る空間（以降、固有空間とする）を考え、
             この空間への状態ベクトル$|\psi\rangle$の射影を取り、この射影の長さを二乗することで得られる。これをボルンの規則と呼ぶ。
             数式で表現すると固有空間への射影演算子を$\widehat{P}\left( a^{(n)}\right)$として以下の通り。
-            $P\left( a^{(n)}\right)$と$\widehat{P}\left( a^{(n)}\right)$は記号が似ているが、それぞれPropabilityとProjectionの頭文字であるので無関係である。</li>
-            \[
-            P\left( a^{(n)}\right) = \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right|^2
-             = \langle \psi | \widehat{P}\left( a^{(n)}\right) | \psi \rangle
-            \]
-            縮退がない場合は固有ベクトルを$|a_{(n)}\rangle$として
-            $P\left( a^{(n)}\right) = \langle \psi |a^{(n)} \rangle \langle a_{(n)}|\psi \rangle
-             = \left| \langle a_{(n)} | \psi \rangle \right| ^{2}$となる。
+            $P\left( a^{(n)}\right)$と$\widehat{P}\left(
+            a^{(n)}\right)$は記号が似ているが、それぞれPropabilityとProjectionの頭文字であるので無関係である。</li>
+        \[
+        P\left( a^{(n)}\right) = \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right|^2
+        = \langle \psi | \widehat{P}\left( a^{(n)}\right) | \psi \rangle
+        \]
+        縮退がない場合は固有ベクトルを$|a_{(n)}\rangle$として
+        $P\left( a^{(n)}\right) = \langle \psi |a^{(n)} \rangle \langle a_{(n)}|\psi \rangle
+        = \left| \langle a_{(n)} | \psi \rangle \right| ^{2}$となる。
         <li>測定の直前に状態$|\psi\rangle$であった系に物理量$\widehat{A}$の理想測定を行い、<br>
             測定値$a^{(n)}$が得られたとすると、測定の直後の状態$|\phi\rangle$は測定の直前の状態$|\psi\rangle$の固有空間への射影を規格化したものとなる。
             これを射影仮説と呼ぶ。数式にすると以下の通り。
             \[
-            | \phi \rangle = \dfrac{1}{ \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right| }\widehat{P}\left( a^{(n)}\right) | \psi \rangle
+            | \phi \rangle = \dfrac{1}{ \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right| }\widehat{P}\left(
+            a^{(n)}\right) | \psi \rangle
             \]
             縮退がない場合は$|\phi\rangle = \frac{1}{\left| |a_{(n)}\rangle\langle a^{(n)}|\psi \rangle \right|}
             |a_{(n)}\rangle\langle a^{(n)}|\psi \rangle = |a_{(n)}\rangle$となる。
@@ -87,8 +89,8 @@
         \widehat{q}\widehat{p}-\widehat{p}\widehat{q} = i\hbar\widehat{I}
         \]
         ここで、$\widehat{I}$は恒等演算子である。右辺を単に$i\hbar$とすることもあるが、右辺も演算子であることを強調するために$\widehat{I}$をかけている。また、このような関係の成り立つ$\widehat{p}$と$\widehat{q}$は正準交換関係にあると言う。<br>
-        </p>
-        <p>
+    </p>
+    <p>
         これにより、古典力学における物理量$A\left( q,p\right)$は
         \[
         \widehat{A} = \widehat{A}\left(\widehat{q},\widehat{p}\right)
@@ -107,11 +109,12 @@
         \]
         となる。この量の共役を取ると、
         \[
-        \widehat{A}^\dagger = \left( \widehat{q}\widehat{p} \right)^\dagger = \widehat{p}^\dagger \widehat{q}^\dagger = \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - i\hbar\widehat{I}
+        \widehat{A}^\dagger = \left( \widehat{q}\widehat{p} \right)^\dagger = \widehat{p}^\dagger \widehat{q}^\dagger =
+        \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - i\hbar\widehat{I}
         \]
         よって
         \[
-        \widehat{A}^\dagger \neq \widehat{A} 
+        \widehat{A}^\dagger \neq \widehat{A}
         \]
         となり、共役が自身に一致していない。すなわち、$\widehat{A}$は自己共役演算子ではないので量子力学の要請に反してしまう。
     </p>
@@ -125,24 +128,25 @@
         \widehat{A} &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right) \\
 
         \widehat{A}^\dagger &= \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)^\dagger
-         = \frac{1}{2} \left( \widehat{p}^\dagger\widehat{q}^\dagger + \widehat{q}^\dagger\widehat{p}^\dagger \right) 
+        = \frac{1}{2} \left( \widehat{p}^\dagger\widehat{q}^\dagger + \widehat{q}^\dagger\widehat{p}^\dagger \right)
         = \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)
         \end{aligned}
         よって、
         \[
-        \widehat{A}^\dagger = \widehat{A} 
+        \widehat{A}^\dagger = \widehat{A}
         \]
         となり、共役が自身に一致する。すなわち、$\widehat{A}$は自己共役演算子となり、量子力学の要請を満たす$\widehat{A}$が得られたことになる。
         ハミルトニアン演算子$\widehat{H}$も同様の手続きによって得ることができ、これによりハイゼンベルク方程式の具体的な形が決まる。
         このハイゼンベルク方程式に適当な初期条件を与えることで、その系のある時刻において物理量$A$を測定した際に、
         測定値$a^{(n)}$が得られる確率を予言することができる。
-        <h2>正準量子化の手続き（多自由度の場合）</h2>
-        （加筆予定）$\left[ \widehat{q}_{\alpha} , \widehat{p}_{\beta} \right] = i\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
-        <h2>正準量子化の不完全さ</h2>
-        （加筆予定）以上の手続きだけでは$\widehat{A}$の形に不定性が残り、場合によっては現実に合う結果を与えない。
-        量子力学が古典力学を包括しているのであり、古典力学から量子力学を完全に類推するには情報量が足りないのは当然である。
-        <h2>交換関係とポアソン括弧</h2>
-        （加筆予定）交換関係とポアソン括弧が対応している。すなわち、ハイゼンベルク方程式とポアソン括弧による物理量の時間発展が対応している（対応原理）。
+    <h2>正準量子化の手続き（多自由度の場合）</h2>
+    （加筆予定）$\left[ \widehat{q}_{\alpha} , \widehat{p}_{\beta} \right] =
+    i\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
+    <h2>正準量子化の不完全さ</h2>
+    （加筆予定）以上の手続きだけでは$\widehat{A}$の形に不定性が残り、場合によっては現実に合う結果を与えない。
+    量子力学が古典力学を包括しているのであり、古典力学から量子力学を完全に類推するには情報量が足りないのは当然である。
+    <h2>交換関係とポアソン括弧</h2>
+    （加筆予定）交換関係とポアソン括弧が対応している。すなわち、ハイゼンベルク方程式とポアソン括弧による物理量の時間発展が対応している（対応原理）。
 
     </p>
     <!--
@@ -192,70 +196,73 @@
     これまで演算子の具体的な形について触れてこなかったが、以下のように適当な基底と紐付けることで行列として表示できる。
     いま、あるベクトル$\ket{\psi}$があったとして、これを適当な正規直交基底$\ket{e_{(n)}}$で展開すると、
     \[
-        \ket{\psi} = \sum_{j}\psi^{(j)}\ket{e_{(j)}}
+    \ket{\psi} = \sum_{j}\psi^{(j)}\ket{e_{(j)}}
     \]
     とできる。$j$成分を$\psi^{(j)}$とした。ここに演算子$\widehat{A}$を作用させると、
     \[
-    \widehat{A}\ket{\psi} = \widehat{A}\sum_{j}\psi^{(j)}\ket{e_{(j)}} = \sum_{j}\psi^{(j)} \left( \widehat{A}\ket{e_{(j)}} \right)
-   \]
-   とできる。ここで、ベクトル$\widehat{A}\ket{e_{(j)}}$をさらに$\ket{e_{(n)}}$で展開すると、
-   \[
-   \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right)
+    \widehat{A}\ket{\psi} = \widehat{A}\sum_{j}\psi^{(j)}\ket{e_{(j)}} = \sum_{j}\psi^{(j)} \left(
+    \widehat{A}\ket{e_{(j)}} \right)
+    \]
+    とできる。ここで、ベクトル$\widehat{A}\ket{e_{(j)}}$をさらに$\ket{e_{(n)}}$で展開すると、
+    \[
+    \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right)
     = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{(j)} \ket{e_{(i)}} \right)
-  \]
+    \]
     とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。
     この成分は$\widehat{A}$由来であって2つの添字で区別される量である。つまり、$\widehat{A}$の行列表示とみなせる。
     また、上の式は行列とベクトルの積の定義そのものの形をしている。すなわち、$\widehat{A}$を$\ket{\psi}$に作用させるということは、
     行列$\widehat{A}$とベクトル$\ket{\psi}$の積を取ることだとみなせる。
-</p>
-<p>
-    さらに、$\ket{\psi} = \ket{e_{(j)}}$とすれば添字$j$に関する和がなくなって、
-    \[
-    \widehat{A}\ket{e_{(j)}} = \sum_{i}A^{i}_{j}\ket{e_{(i)}}
-    \]
-    とできて、ここに$\bra{e^{(i)}}$をかけると、
-    \[
-    \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} = \sum_{i}A^{i}_{j}\braket*{e^{(i)}}{e_{(j)}} = A^{i}_{j}
-    \]
-    となり、成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
+    </p>
+    <p>
+        さらに、$\ket{\psi} = \ket{e_{(j)}}$とすれば添字$j$に関する和がなくなって、
+        \[
+        \widehat{A}\ket{e_{(j)}} = \sum_{i}A^{i}_{j}\ket{e_{(i)}}
+        \]
+        とできて、ここに$\bra{e^{(i)}}$をかけると、
+        \[
+        \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} = \sum_{i}A^{i}_{j}\braket*{e^{(i)}}{e_{(j)}} = A^{i}_{j}
+        \]
+        となり、成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
     </p>
     <p>ここで、$\widehat{A}$を改めて行列として表示しておく。
-    \[
-    \widehat{A} = \left[
-    \begin{array}{ccccc}
-    \mel*{e^{(0)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(0)}}{\widehat{A}}{e_{(1)}} & \ldots    &\mel*{e^{(0)}}{\widehat{A}}{e_{(j)}} &\ldots \\
-    \mel*{e^{(1)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(1)}}{\widehat{A}}{e_{(1)}}                                                                          \\
-    \vdots                         &                                & \ddots                                                                 \\
-    \mel*{e^{(i)}}{\widehat{A}}{e_{(0)}} &                                &                    &            \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}}       \\
-    \vdots                         &                                &                                &                               &\ddots \\
-    \end{array}
-    \right]
-    \]
-    この正規直交基底$\ket{e_{(n)}}$に$\widehat{A}$の固有ベクトル$| a_{(n)} \rangle$を選べば、固有値を$a^{(n)}$として、
-    \[
-    A^i_j = \langle a^{(i)}|\widehat{A}|a_{(j)}\rangle=a^{(j)}\langle a^{(i)}|a_{(j)}\rangle
-    =\left \{ \begin{array}{cc} a^{(j)} & (i=j) \\ 0 & (i \ne j) \end{array} \right.
-    \]
-    となって、以下のような固有値$a^{(n)}$の対角行列が得られる。
-    \[\widehat{A} = 
-    \left[
-    \begin{array}{ccccc}
-    a^{(1)} & & & &  \\
-    & a^{(2)} & & \Huge{0} & \\
-    & & \ddots & & \\
-    & \Huge{0} & & a^{(n)} & \\
-    & & & & \ddots \\
-    
-    \end{array}
-    \right]
+        \[
+        \widehat{A} = \left[
+        \begin{array}{ccccc}
+        \mel*{e^{(0)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(0)}}{\widehat{A}}{e_{(1)}} & \ldots
+        &\mel*{e^{(0)}}{\widehat{A}}{e_{(j)}} &\ldots \\
+        \mel*{e^{(1)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(1)}}{\widehat{A}}{e_{(1)}} \\
+        \vdots & & \ddots \\
+        \mel*{e^{(i)}}{\widehat{A}}{e_{(0)}} & & & \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} \\
+        \vdots & & & &\ddots \\
+        \end{array}
+        \right]
+        \]
+        この正規直交基底$\ket{e_{(n)}}$に$\widehat{A}$の固有ベクトル$| a_{(n)} \rangle$を選べば、固有値を$a^{(n)}$として、
+        \[
+        A^i_j = \langle a^{(i)}|\widehat{A}|a_{(j)}\rangle=a^{(j)}\langle a^{(i)}|a_{(j)}\rangle
+        =\left \{ \begin{array}{cc} a^{(j)} & (i=j) \\ 0 & (i \ne j) \end{array} \right.
+        \]
+        となって、以下のような固有値$a^{(n)}$の対角行列が得られる。
+        \[\widehat{A} =
+        \left[
+        \begin{array}{ccccc}
+        a^{(1)} & & & & \\
+        & a^{(2)} & & \Huge{0} & \\
+        & & \ddots & & \\
+        & \Huge{0} & & a^{(n)} & \\
+        & & & & \ddots \\
 
-    \]
-    量子力学の教科書にはよく「エルミート行列は適当なユニタリ変換のもと実数の対角行列に対角化できる」という文言が書いてあるのだが、これは上記の内容を保証している。<br>
+        \end{array}
+        \right]
+
+        \]
+        量子力学の教科書にはよく「エルミート行列は適当なユニタリ変換のもと実数の対角行列に対角化できる」という文言が書いてあるのだが、これは上記の内容を保証している。<br>
     <p>
         なお、正準交換関係を満たす$\widehat{q}$と$\widehat{p}$の具体的な表現を探すと、複素数の成分を持つ無限次元の行列が見つかる（証明略）。
-        よって、$\widehat{q}$と$\widehat{p}$の関数である物理量$\widehat{A}\left( \widehat{q},\widehat{p}\right)$を考える際も無限次元の行列を扱うことになる。ただし、これはすべての物理量が無限次元であることを意味しない。$\widehat{q}$と$\widehat{p}$の関数になっておらず、また有限次元の行列で表される物理量を考えることもできる。<br>
+        よって、$\widehat{q}$と$\widehat{p}$の関数である物理量$\widehat{A}\left(
+        \widehat{q},\widehat{p}\right)$を考える際も無限次元の行列を扱うことになる。ただし、これはすべての物理量が無限次元であることを意味しない。$\widehat{q}$と$\widehat{p}$の関数になっておらず、また有限次元の行列で表される物理量を考えることもできる。<br>
     </p>
-    
+
     <h1>時間発展</h1>
     <h2>演算子（=物理量の行列）の時間発展</h2>
     <p>
@@ -274,12 +281,14 @@
         とできる。ある基準となる時刻を$t_0$とした。また、ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
     <p>
-        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
+        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t
+        \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
         \begin{aligned}
-            A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
-                     &= \mel*{\phi^{(i)}}{\exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left( t-t_0\right))}{\phi_{(j)}} \\
-                     &=  \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right)) \\
-                     &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right))
+        A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
+        &= \mel*{\phi^{(i)}}{\exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left(
+        t-t_0\right))}{\phi_{(j)}} \\
+        &= \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right)) \\
+        &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right))
         \end{aligned}
         と書ける。行列要素が振動型の時間発展をし、その振動数はエネルギー$\left( E^{(i)}-E^{(j)}\right)$に比例する。歴史的には上記の議論を逆に辿っており、
         ハイゼンベルクはこの行列要素の振動型の時間発展を分光学の実験結果と電子の軌道運動のフーリエ級数展開から見いだし、ハイゼンベルク方程式にたどり着いたという（より正確には行列の形式に整備して完成させたのはボルンとヨルダンである）。
@@ -298,9 +307,35 @@
     </p>
     -->
     <h2>時間発展の演算子</h2>
-    （未定）
+    （未着手）
     <h2>ハイゼンベルク描像とシュレディンガー描像</h2>
-    （未定）
+    （未着手）
+    <h1>固有値問題</h1>
+    <h2>一般の固有値問題の解法</h2>
+    （未着手）
+    <h2>因数分解法による固有値問題の解法</h2>
+    （未着手）
+    <h2>因数分解法による固有値問題の証明</h2>
+    （未着手）
+    <h2>シュレディンガー方程式との関係</h2>
+
+    <h1>ハイゼンベルクの不確定性原理</h1>
+    （未着手）
+    <h1>外部自由度と内部自由度</h1>
+    （未着手）
+    <h1>調和振動子</h1>
+    <h2>天下り的な解法</h2>    （未着手）
+    <h2>演繹的な解法</h2>    （未着手）
+    <h2>物理的考察</h2>    （未着手）
+    <h1>角運動量</h1>    （未着手）
+
+    <h1>スピン角運動量と軌道角運動量</h1>    （未着手）
+    
+    <h1>水素様原子</h1>    （未着手）
+
+    <h1>電磁場の量子化</h1>    （未着手）
+
+    <h1>相対論的量子力学</h1>    （未着手）
 </body>
 
 </html>
