@@ -23,10 +23,10 @@
     <p>人類はミクロなスケールにおいて未来を完全に予言することを諦め、ある程度のランダムさを理論の中に組み込むことを認めた。<br>
         ではどこまで予言できるのか。以下の2つのことを予言できる。
     <ol>
-        <li>ある特定の測定の結果として得られる測定値$a^{(n)}$を予言することはできないが、
-            その結果が一組の値$\{a^{(0)},\ a^{(1)},\ a^{(2)},...\}$に属することを予言できる。</li>
-        <li>また、その測定値が$a^{(n)}$である確率$P(a^{(n)})$を予言することができる。
-            あるいは同じことであるが、同じ実験を十分多数回繰り返して行った際、測定の結果が$a^{(n)}$となる回数の割合を予言できる。
+        <li>ある特定の測定の結果として得られる測定値$a_n$を予言することはできないが、
+            その結果が一組の値$\{a_0,\ a_1,\ a_2,...\}$に属することを予言できる。</li>
+        <li>また、その測定値が$a_n$である確率$P(a_n)$を予言することができる。
+            あるいは同じことであるが、同じ実験を十分多数回繰り返して行った際、測定の結果が$a_n$となる回数の割合を予言できる。
         </li>
     </ol>
     </p>
@@ -46,29 +46,28 @@
             \]
         </li>
         <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
-            測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a^{(n)}$として得られる。<br>
+            測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a_n$として得られる。<br>
             どの固有値になるかを完全に予言することはできず、確率的にしか分からない。<br>
-            測定によりある測定値$a^{(n)}$が得られる確率$P(a^{(n)})$は、$a^{(n)}$に対応する固有ベクトルの張る空間（以降、固有空間とする）を考え、
+            測定によりある測定値$a_n$が得られる確率$P(a_n)$は、$a_n$に対応する固有ベクトルの張る空間（以降、固有空間とする）を考え、
             この空間への状態ベクトル$|\psi\rangle$の射影を取り、この射影のノルムを二乗することで得られる。これをボルンの規則と呼ぶ。
-            数式で表現すると固有空間への射影演算子を$\widehat{P}\left( a^{(n)}\right)$として以下の通り。
-            $P\left( a^{(n)}\right)$と$\widehat{P}\left(
-            a^{(n)}\right)$は記号が似ているが、それぞれPropabilityとProjectionの頭文字であるので無関係である。</li>
+            数式で表現すると固有空間への射影演算子を$\widehat{P}\left( a_n\right)$として以下の通り。
+            $P\left( a_n\right)$と$\widehat{P}\left(a_n\right)$は記号が似ているが、それぞれPropabilityとProjectionの頭文字であるので無関係である。</li>
         \[
-        P\left( a^{(n)}\right) = \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right|^2
-        = \langle \psi | \widehat{P}\left( a^{(n)}\right) | \psi \rangle
+        P\left( a_n\right) = \left| \widehat{P}\left( a_n\right) |\psi \rangle \right|^2
+        = \langle \psi | \widehat{P}\left( a_n\right) | \psi \rangle
         \]
-        縮退がない場合は固有ベクトルを$|a_{(n)}\rangle$として
-        $P\left( a^{(n)}\right) = \langle \psi |a^{(n)} \rangle \langle a_{(n)}|\psi \rangle
-        = \left| \langle a_{(n)} | \psi \rangle \right| ^{2}$となる。
+        縮退がない場合は$a_n$に対応する固有ベクトルを$\ket{a_{n}}$として
+        $P\left( a_n\right) = \braket*{\psi}{a^{n}}\braket*{a_{n}}{\psi}
+        = \left|\braket{a_{n}}{\psi}\right| ^{2}$となる。
         <li>測定の直前に状態$|\psi\rangle$であった系に物理量$\widehat{A}$の理想測定を行い、<br>
-            測定値$a^{(n)}$が得られたとすると、測定の直後の状態$|\phi\rangle$は測定の直前の状態$|\psi\rangle$の固有空間への射影を規格化したものとなる。
+            測定値$a^{n}$が得られたとすると、測定の直後の状態$|\phi\rangle$は測定の直前の状態$|\psi\rangle$の固有空間への射影を規格化したものとなる。
             これを射影仮説と呼ぶ。数式にすると以下の通り。
             \[
-            | \phi \rangle = \dfrac{1}{ \left| \widehat{P}\left( a^{(n)}\right) |\psi \rangle \right| }\widehat{P}\left(
-            a^{(n)}\right) | \psi \rangle
+            | \phi \rangle = \dfrac{1}{ \left| \widehat{P}\left( a_{n}\right) |\psi \rangle \right| }\widehat{P}\left(
+            a_{n}\right) | \psi \rangle
             \]
-            縮退がない場合は$|\phi\rangle = \frac{1}{\left| |a_{(n)}\rangle\langle a^{(n)}|\psi \rangle \right|}
-            |a_{(n)}\rangle\langle a^{(n)}|\psi \rangle = |a_{(n)}\rangle$となる。
+            縮退がない場合は$|\phi\rangle = \frac{1}{\left| |a_{n}\rangle\langle a^{n}|\psi \rangle \right|}
+            |a_{n}\rangle\langle a^{n}|\psi \rangle = |a_{n}\rangle$となる。
         </li>
     </ol>
     </p>
@@ -138,7 +137,7 @@
         となり、共役が自身に一致する。すなわち、$\widehat{A}$は自己共役演算子となり、量子力学の要請を満たす$\widehat{A}$が得られたことになる。
         ハミルトニアン演算子$\widehat{H}$も同様の手続きによって得ることができ、これによりハイゼンベルク方程式の具体的な形が決まる。
         このハイゼンベルク方程式に適当な初期条件を与えることで、その系のある時刻において物理量$A$を測定した際に、
-        測定値$a^{(n)}$が得られる確率を予言することができる。
+        測定値$a^{n}$が得られる確率を予言することができる。
     <h2>正準量子化の手続き（多自由度の場合）</h2>
     （加筆予定）$\left[ \widehat{q}_{\alpha} , \widehat{p}_{\beta} \right] =
     i\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
@@ -184,7 +183,7 @@
     <p>
         交換子がゼロでない場合、演算子が交換しないという。このとき、数学的には2つの演算子が固有ベクトルを共有することがないことを示すことができる。<br>
 
-        このことは物理的には次のように解釈される。ふたつの交換しない物理量$A$と$B$があって、片方の物理量$A$を観測したとき、系の状態ベクトルは$A$の固有ベクトルとなっており、もう片方の物理量$B$の固有ベクトルではない。このとき、物理量$B$がどの値を取っているかを量子力学は与えてくれないし、$B$は明確な値$b^{(n)}$など持っていないと考えることになっている。
+        このことは物理的には次のように解釈される。ふたつの交換しない物理量$A$と$B$があって、片方の物理量$A$を観測したとき、系の状態ベクトルは$A$の固有ベクトルとなっており、もう片方の物理量$B$の固有ベクトルではない。このとき、物理量$B$がどの値を取っているかを量子力学は与えてくれないし、$B$は明確な値$b^{n}$など持っていないと考えることになっている。
     </p>
     <p>
         上記は一次元においての議論であったが、三次元においては
@@ -194,19 +193,19 @@
     </p> -->
     <h1>演算子の行列表示</h1>
     これまで演算子の具体的な形について触れてこなかったが、以下のように適当な基底と紐付けることで行列として表示できる。
-    いま、あるベクトル$\ket{\psi}$があったとして、これを適当な正規直交基底$\ket{e_{(n)}}$で展開すると、
+    いま、あるベクトル$\ket{\psi}$があったとして、これを適当な正規直交基底$\ket{e_{n}}$で展開すると、
     \[
-    \ket{\psi} = \sum_{j}\psi^{(j)}\ket{e_{(j)}}
+    \ket{\psi} = \sum_{j}\psi^{j}\ket{e_{j}}
     \]
-    とできる。$j$成分を$\psi^{(j)}$とした。ここに演算子$\widehat{A}$を作用させると、
+    とできる。$j$成分を$\psi^{j}$とした。ここに演算子$\widehat{A}$を作用させると、
     \[
-    \widehat{A}\ket{\psi} = \widehat{A}\sum_{j}\psi^{(j)}\ket{e_{(j)}} = \sum_{j}\psi^{(j)} \left(
-    \widehat{A}\ket{e_{(j)}} \right)
+    \widehat{A}\ket{\psi} = \widehat{A}\sum_{j}\psi^{j}\ket{e_{j}} = \sum_{j}\psi^{j} \left(
+    \widehat{A}\ket{e_{j}} \right)
     \]
-    とできる。ここで、ベクトル$\widehat{A}\ket{e_{(j)}}$をさらに$\ket{e_{(n)}}$で展開すると、
+    とできる。ここで、ベクトル$\widehat{A}\ket{e_{j}}$をさらに$\ket{e_{n}}$で展開すると、
     \[
-    \widehat{A}\ket{\psi} = \sum_{j} \psi^{(j)}\left( \sum_{i} A^{i}_{j} \ket{e_{(i)}} \right)
-    = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{(j)} \ket{e_{(i)}} \right)
+    \widehat{A}\ket{\psi} = \sum_{j} \psi^{j}\left( \sum_{i} A^{i}_{j} \ket{e_{i}} \right)
+    = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{j} \ket{e_{i}} \right)
     \]
     とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。
     この成分は$\widehat{A}$由来であって2つの添字で区別される量である。つまり、$\widehat{A}$の行列表示とみなせる。
@@ -214,13 +213,13 @@
     行列$\widehat{A}$とベクトル$\ket{\psi}$の積を取ることだとみなせる。
     </p>
     <p>
-        さらに、$\ket{\psi} = \ket{e_{(j)}}$とすれば添字$j$に関する和がなくなって、
+        さらに、$\ket{\psi} = \ket{e_{j}}$とすれば添字$j$に関する和がなくなって、
         \[
-        \widehat{A}\ket{e_{(j)}} = \sum_{i}A^{i}_{j}\ket{e_{(i)}}
+        \widehat{A}\ket{e_{j}} = \sum_{i}A^{i}_{j}\ket{e_{i}}
         \]
-        とできて、ここに$\bra{e^{(i)}}$をかけると、
+        とできて、ここに$\bra{e^{i}}$をかけると、
         \[
-        \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} = \sum_{i}A^{i}_{j}\braket*{e^{(i)}}{e_{(j)}} = A^{i}_{j}
+        \mel*{e^{i}}{\widehat{A}}{e_{j}} = \sum_{i}A^{i}_{j}\braket*{e^{i}}{e_{j}} = A^{i}_{j}
         \]
         となり、成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
     </p>
@@ -228,28 +227,28 @@
         \[
         \widehat{A} = \left[
         \begin{array}{ccccc}
-        \mel*{e^{(0)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(0)}}{\widehat{A}}{e_{(1)}} & \ldots
-        &\mel*{e^{(0)}}{\widehat{A}}{e_{(j)}} &\ldots \\
-        \mel*{e^{(1)}}{\widehat{A}}{e_{(0)}} & \mel*{e^{(1)}}{\widehat{A}}{e_{(1)}} \\
+        \mel*{e^{0}}{\widehat{A}}{e_{0}} & \mel*{e^{0}}{\widehat{A}}{e_{1}} & \ldots
+        &\mel*{e^{0}}{\widehat{A}}{e_{j}} &\ldots \\
+        \mel*{e^{1}}{\widehat{A}}{e_{0}} & \mel*{e^{1}}{\widehat{A}}{e_{1}} \\
         \vdots & & \ddots \\
-        \mel*{e^{(i)}}{\widehat{A}}{e_{(0)}} & & & \mel*{e^{(i)}}{\widehat{A}}{e_{(j)}} \\
+        \mel*{e^{i}}{\widehat{A}}{e_{0}} & & & \mel*{e^{i}}{\widehat{A}}{e_{j}} \\
         \vdots & & & &\ddots \\
         \end{array}
         \right]
         \]
-        この正規直交基底$\ket{e_{(n)}}$に$\widehat{A}$の固有ベクトル$| a_{(n)} \rangle$を選べば、固有値を$a^{(n)}$として、
+        この正規直交基底$\ket{e_{n}}$に$\widehat{A}$の規格化された固有ベクトル$| a_{n} \rangle$を選べば、固有値を$a_{n}$として、
         \[
-        A^i_j = \langle a^{(i)}|\widehat{A}|a_{(j)}\rangle=a^{(j)}\langle a^{(i)}|a_{(j)}\rangle
-        =\left \{ \begin{array}{cc} a^{(j)} & (i=j) \\ 0 & (i \ne j) \end{array} \right.
+        A^i_j = \langle a^{i}|\widehat{A}|a_{j}\rangle=a_{j}\langle a^{i}|a_{j}\rangle
+        =\left \{ \begin{array}{cc} a^{j} & (i=j) \\ 0 & (i \ne j) \end{array} \right.
         \]
-        となって、以下のような固有値$a^{(n)}$の対角行列が得られる。
+        となって、以下のような固有値$a^{n}$の対角行列が得られる。
         \[\widehat{A} =
         \left[
         \begin{array}{ccccc}
-        a^{(1)} & & & & \\
-        & a^{(2)} & & \Huge{0} & \\
+        a_{0} & & & & \\
+        & a_{1} & & \Huge{0} & \\
         & & \ddots & & \\
-        & \Huge{0} & & a^{(n)} & \\
+        & \Huge{0} & & a_{n} & \\
         & & & & \ddots \\
 
         \end{array}
@@ -281,16 +280,17 @@
         とできる。ある基準となる時刻を$t_0$とした。また、ここでいう$\exp(X)$は行列であることを強調しておく。
     </p>
     <p>
-        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{(n)}}$、固有値を$E^{(n)}$とすれば$A\left( t
-        \right)$の行列要素$A^i_j(t) = \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}}$は、
+        あるいは、エネルギーが対角化された表示ではさらに見通しがよくなる。すなわち$H$の規格化された固有ベクトルを$\ket{\phi_{n}}$、
+        固有値を$E_{n}$とすれば$A\left( t
+        \right)$の行列要素$A^i_j(t) = \mel*{\phi^{i}}{A\left( t \right)}{\phi_{j}}$は、
         \begin{aligned}
-        A^i_j(t) &= \mel*{\phi^{(i)}}{A\left( t \right)}{\phi_{(j)}} \\
-        &= \mel*{\phi^{(i)}}{\exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left(
-        t-t_0\right))}{\phi_{(j)}} \\
-        &= \mel*{\phi^{(i)}}{A\left( 0 \right)}{\phi_{(j)}}\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right)) \\
-        &= A^i_j(0)\exp(i\frac{E^{(i)} - E^{(j)}}{\hbar}\left( t-t_0\right))
+        A^i_j(t) &= \mel*{\phi^{i}}{A\left( t \right)}{\phi_{j}} \\
+        &= \mel*{\phi^{i}}{\exp(i\frac{H}{\hbar}\left( t-t_0\right))A\left( t_0 \right)\exp(-i\frac{H}{\hbar}\left(
+        t-t_0\right))}{\phi_{j}} \\
+        &= \mel*{\phi^{i}}{A\left( 0 \right)}{\phi_{j}}\exp(i\frac{E_{i} - E_{j}}{\hbar}\left( t-t_0\right)) \\
+        &= A^i_j0\exp(i\frac{E_{i} - E_{j}}{\hbar}\left( t-t_0\right))
         \end{aligned}
-        と書ける。行列要素が振動型の時間発展をし、その振動数はエネルギー$\left( E^{(i)}-E^{(j)}\right)$に比例する。歴史的には上記の議論を逆に辿っており、
+        と書ける。行列要素が振動型の時間発展をし、その振動数はエネルギー$\left( E_{i}-E_{j}\right)$に比例する。歴史的には上記の議論を逆に辿っており、
         ハイゼンベルクはこの行列要素の振動型の時間発展を分光学の実験結果と電子の軌道運動のフーリエ級数展開から見いだし、ハイゼンベルク方程式にたどり着いたという（より正確には行列の形式に整備して完成させたのはボルンとヨルダンである）。
     </p>
     <!--<p>
@@ -314,7 +314,7 @@
     <h2>一般的の場合の解法</h2>
     （未着手）
     <h2>因数分解法(Factorization Method)による固有値問題の解法</h2>
-    演算子$A$の$n$番目に大きい固有値を$a^{(n)}$としたとき、以下の手順により$a^{(n)}$の具体的な値が得られる。
+    演算子$A$の$n$番目に大きい固有値を$a_{n}$としたとき、以下の手順により固有値を決定できる。
     <ol>
         <li>演算子$A_0$を$A_0=A$で定義する。この$A_0$を因数分解して以下のように変形する。
             \[
@@ -337,24 +337,25 @@
             A_{n+1} &= \theta_n \theta_n^\dagger + c_n \\
                     &= \theta_{n+1} \theta_{n+1}^\dagger + c_{n+1}
             \end{aligned}
-            を作っていくと、実は$c_n = a^{(n)}$となっており、$a^{(n)}$の具体的な値が得られたことになる。
+            を作っていくと、実は$c_n = a_{n}$となっており、$a^{n}$が決定されたことになる。
             ただし、$\theta_0 \ket{\psi}=0$となるベクトル$\ket{\psi}$が存在しなければならない。
         </li>
     </ol>
     <h2>因数分解法による固有値問題の解法の証明</h2>
-    まず、手順1における$c_0$が$A$の最小固有値であることを以下のように示す。いま、$a^{(n)}$に対応する規格化された固有ベクトルを$\ket{a_{(n)}}$とし、ベクトル$\ket{\phi_{0,n}}$を
+    まず、手順1における$c_0$が$A$の最小固有値であることを以下のように示す。いま、$a_{n}$に対応する規格化された固有ベクトルを$\ket{a_{n}}$とし、
+    ベクトル$\ket{\phi_{0,n}}$を
     \[
-        \ket{\phi_{0,n}} = \theta_0 \ket{a_{(n)}}
+        \ket{\phi_{0,n}} = \theta_0 \ket{a_{n}}
     \]
     で定義すると、そのノルムの二乗は
     \begin{aligned}
         \braket{\phi_{0,n}}{\phi_{0,n}}
-                                &= \mel*{a^{(n)}}{\theta_0^\dagger\theta_0}{a_{(n)}} \\ 
-                                &= \mel*{a^{(n)}}{\left( A_0 - c_0 \right)}{a_{(n)}} \\
-                                &= a^{(n)}\braket{a^{(n)}}{a_{(n)}} - c_0\braket{a^{(n)}}{a_{(n)}} \\
-                                &= a^{(n)}-c_0 \geq 0
+                                &= \mel*{a^{n}}{\theta_0^\dagger\theta_0}{a_{n}} \\ 
+                                &= \mel*{a^{n}}{\left( A_0 - c_0 \right)}{a_{n}} \\
+                                &= a_{n}\braket*{a^{n}}{a_{n}} - c_0\braket*{a^{n}}{a_{n}} \\
+                                &= a_{n}-c_0 \geq 0
     \end{aligned}
-    となる。最後の不等号はノルムの二乗が非負であることを意図している。このことから、$c_n$より小さい固有値$a^{(n)}$は存在しないことが分かる。
+    となる。最後の不等号はノルムの二乗が非負であることを意図している。このことから、$c_0$より小さい固有値$a_{n}$は存在しないことが分かる。
     ところで、もし$\theta_0 \ket{\psi} = 0$である規格化されたベクトル$\ket{\psi}$が存在するならば、
     \begin{aligned}
     \theta_0^\dagger\theta_0 \ket{\psi} &= 0 \\
@@ -362,27 +363,32 @@
     A_0\ket{\psi} &= c_0\ket{\psi} \\
     \end{aligned}
     となって、$\ket{\psi}$は$c_0$を固有値とする$A_0 = A$の固有ベクトルとなっている。
-    $c_0$より小さい固有値は存在しないのだから、$c_0$は最も小さい固有値$a^{(n)}$に等しく、$\ket{\psi}$は$\ket{a_{(n)}}$に等しい。
+    $c_0$より小さい固有値は存在しないのだから、
+    \begin{aligned}
+        c_0 &= a_0 \\
+        \frac{1}{\left| \ket{\psi}\right|}\ket{\psi} &= \ket{a_0}
+\end{aligned}
+    が言える。すなわち、$c_0$は最も小さい固有値$a^{0}$に等しく、$\frac{1}{\left| \ket{\psi}\right|}\ket{\psi}$は$\ket{a_{0}}$に等しい。
     </p>
-    <p>また、手順1で$c_0$を最も大きくなるように選んだが、$c_0$の候補が複数あり選んだ$c_0$より大きい候補$c_0^\prime$があった場合に、
+    <p>また、$c_0$を最も大きくなるように選ぶ理由を示しておく。いま、$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0 < c_0^\prime$となる$c_0^\prime$があるとき、
         \begin{aligned}
             A_0 &= \theta_0^\dagger\theta_0 + c_0 \\
                  &= \theta_0^{\prime\dagger}\theta_0^{\prime} + c_0^\prime
         \end{aligned}
-        として$\theta_0 \ket{\psi} = 0$となる規格化されたベクトル$\ket{\psi}$が存在すると仮定すると、
+        で$\theta_0^{\prime}$を定義する。ここで、$\theta_0 \ket{\psi} = 0$となるベクトル$\ket{\psi}$が存在すると仮定すると、
         \begin{aligned}
-        \mel*{\psi}{A_0}{\psi} &= \mel*{\psi}{\left( \theta_0^\dagger \theta_0 + c_0 \right)}{\psi} = c_0     \\
+        \mel*{\psi}{A_0}{\psi} &= \mel*{\psi}{\left( \theta_0^\dagger \theta_0 + c_0 \right)}{\psi} = c_0 \braket*{\psi}{\psi}    \\
                                 &= \mel*{\psi}{\left( \theta_0^{\prime\dagger} \theta_0^\prime + c_0^\prime \right)}{\psi}
-                                 = \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} + c_0^\prime
+                                 = \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} + c_0^\prime  \braket*{\psi}{\psi} 
                              
     \end{aligned}
     なので
     \begin{aligned}
-        \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} &= c_0 - c_0^\prime < 0 \qquad\because c_0 < c_0\prime
+        \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} &= \left( c_0 - c_0^\prime \right) \braket*{\psi}{\psi} < 0 \qquad\because c_0 < c_0\prime
     \end{aligned} 
-    となって、$\theta_0^\prime\ket{\psi}$のノルムの二乗が負になってしまうので、
-    $\theta_0 \ket{\psi} = 0$となる$\ket{\psi}$が存在できないこととなり、
-    $c_0$は最も大きくなるよう選ぶ必要があることがわかる。
+    となって$\theta_0^\prime\ket{\psi}$のノルムの二乗が負になってしまうので、
+    $\theta_0 \ket{\psi} = 0$となる$\ket{\psi}$が存在しないことになり、
+    $c_0$は最も大きくなるよう選ぶ必要があることが分かる。
     <p>
         （書きかけ）手順2で$A_{n-1}$から最小固有値を取り除くと$A_n$になることを示す。
     </p>
