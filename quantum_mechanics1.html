@@ -364,19 +364,19 @@
     となって、$\ket{\psi}$は$c_0$を固有値とする$A_0 = A$の固有ベクトルとなっている。
     $c_0$より小さい固有値は存在しないのだから、$c_0$は最も小さい固有値$a^{(n)}$に等しく、$\ket{\psi}$は$\ket{a_{(n)}}$に等しい。
     </p>
-    <p>また、手順1で$c_0$を最も大きくなるように選んだが、$c_0$の候補が複数あり、選んだ$c_0$より大きい候補$c_0^\prime$があった場合に、
+    <p>また、手順1で$c_0$を最も大きくなるように選んだが、$c_0$の候補が複数あり選んだ$c_0$より大きい候補$c_0^\prime$があった場合に、
         \begin{aligned}
             A_0 &= \theta_0^\dagger\theta_0 + c_0 \\
                  &= \theta_0^{\prime\dagger}\theta_0^{\prime} + c_0^\prime
         \end{aligned}
-        として、$\theta_0 \ket{\psi} = 0$となる規格化されたベクトル$\ket{\psi}$が存在すると仮定すると、
+        として$\theta_0 \ket{\psi} = 0$となる規格化されたベクトル$\ket{\psi}$が存在すると仮定すると、
         \begin{aligned}
         \mel*{\psi}{A_0}{\psi} &= \mel*{\psi}{\left( \theta_0^\dagger \theta_0 + c_0 \right)}{\psi} = c_0     \\
                                 &= \mel*{\psi}{\left( \theta_0^{\prime\dagger} \theta_0^\prime + c_0^\prime \right)}{\psi}
                                  = \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} + c_0^\prime
                              
     \end{aligned}
-    なので、
+    なので
     \begin{aligned}
         \mel*{\psi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\psi} &= c_0 - c_0^\prime < 0 \qquad\because c_0 < c_0\prime
     \end{aligned} 
