@@ -34,18 +34,18 @@
     <p>量子力学では以下の5つの要請を無条件に認める。<br>
     <ol>
         <li>状態はヒルベルト空間上の規格化されたベクトル$|\psi\rangle$で表される。</li>
-        <li>物理量はヒルベルト空間上の自己共役演算子$\widehat{A}$によって表される。</li>
-        <li>物理量$\widehat{A}$の時間発展は、ハミルトニアン演算子を$\widehat{H}$として以下のハイゼンベルク方程式に従う。
+        <li>物理量はヒルベルト空間上のエルミート演算子$\widehat{A}$によって表される。</li>
+        <li>物理量$\widehat{A}$の時間発展はハミルトニアン演算子を$\widehat{H}$として以下のハイゼンベルク方程式に従う。
             \[
             i\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
             \]
-            なお、上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
+            なお上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
             その場合は下記のシュレディンガー方程式に従うと考える。
             \[
             i\hbar \dfrac{\mathrm{d}}{\mathrm{d}t}| \psi \rangle = \widehat{H}| \psi \rangle
             \]
         </li>
-        <li>状態$|\psi\rangle$について、物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
+        <li>状態$|\psi\rangle$について物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
             測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a_n$として得られる。<br>
             どの固有値になるかを完全に予言することはできず、確率的にしか分からない。<br>
             測定によりある測定値$a_n$が得られる確率$P(a_n)$は、$a_n$に対応する固有ベクトルの張る空間（以降、固有空間とする）を考え、
@@ -75,7 +75,7 @@
     <h2>正準量子化の手続き（1自由度）</h2>
     <p>
         上記の5つの要請は物理量$\widehat{A}$の具体的な形を与えてくれない。具体的な形は自然を観察することによって推定するしかないのだが、
-        幸いなことに古典力学にて見いだされた物理量$A$に関しては以下の手続きによって演算子$\widehat{A}$に変換することで、
+        幸いなことに古典力学にて見いだされた物理量$A$に関しては以下の手続きによって演算子$\widehat{A}$に変換することで
         多くの場合うまくいくことが経験的に知られている。ここで強調しておくが、量子力学のスケールで初めて見いだされた物理量については本当に適宜推定するしかない。<br>
     </p>
     <p>
@@ -83,7 +83,7 @@
         \[
         A = A\left(q,p\right)
         \]
-        このような物理量の$q$と$p$を、以下のような関係を満たす自己共役演算子$\widehat{p}$と$\widehat{q}$に置き換える。事実、このような$\widehat{p}$と$\widehat{q}$は存在する。
+        このような物理量の$q$と$p$を、以下のような関係を満たすエルミート演算子$\widehat{p}$と$\widehat{q}$に置き換える。事実、このような$\widehat{p}$と$\widehat{q}$は存在する。
         \[
         \widehat{q}\widehat{p}-\widehat{p}\widehat{q} = i\hbar\widehat{I}
         \]
@@ -94,10 +94,10 @@
         \[
         \widehat{A} = \widehat{A}\left(\widehat{q},\widehat{p}\right)
         \]
-        という演算子になる。古典力学では実数であった量$A$を自己共役演算子$\widehat{A}$に変換したのだと強調しておく。
+        という演算子になる。古典力学では実数であった量$A$をエルミート演算子$\widehat{A}$に変換したのだと強調しておく。
     </p>
     <p>
-        ただし、上記の手続きを行う前に、得られる$\widehat{A}$が自己共役演算子となるように$q$と$p$を配置しておかないと不都合が起こる。不都合の具体例を次のように示す。
+        ただし、上記の手続きを行う前に、得られる$\widehat{A}$がエルミート演算子となるように$q$と$p$を配置しておかないと不都合が起こる。不都合の具体例を次のように示す。
         古典物理学において
         \[
         A = qp
@@ -106,7 +106,7 @@
         \[
         \widehat{A} = \widehat{q}\widehat{p}
         \]
-        となる。この量の共役を取ると、
+        となる。この量のエルミート共役を取ると、
         \[
         \widehat{A}^\dagger = \left( \widehat{q}\widehat{p} \right)^\dagger = \widehat{p}^\dagger \widehat{q}^\dagger =
         \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - i\hbar\widehat{I}
@@ -115,7 +115,7 @@
         \[
         \widehat{A}^\dagger \neq \widehat{A}
         \]
-        となり、共役が自身に一致していない。すなわち、$\widehat{A}$は自己共役演算子ではないので量子力学の要請に反してしまう。
+        となりエルミート共役が自身に一致していない。すなわち$\widehat{A}$はエルミート演算子ではないので量子力学の要請に反してしまう。
     </p>
     <p>
         ではどうすればよいかと言うと、例えば$A$を
@@ -130,11 +130,11 @@
         = \frac{1}{2} \left( \widehat{p}^\dagger\widehat{q}^\dagger + \widehat{q}^\dagger\widehat{p}^\dagger \right)
         = \frac{1}{2}\left( \widehat{q}\widehat{p} + \widehat{p}\widehat{q} \right)
         \end{aligned}
-        よって、
+        よって
         \[
         \widehat{A}^\dagger = \widehat{A}
         \]
-        となり、共役が自身に一致する。すなわち、$\widehat{A}$は自己共役演算子となり、量子力学の要請を満たす$\widehat{A}$が得られたことになる。
+        となりエルミート共役が自身に一致する。すなわち$\widehat{A}$はエルミート演算子となり量子力学の要請を満たす$\widehat{A}$が得られたことになる。
         ハミルトニアン演算子$\widehat{H}$も同様の手続きによって得ることができ、これによりハイゼンベルク方程式の具体的な形が決まる。
         このハイゼンベルク方程式に適当な初期条件を与えることで、その系のある時刻において物理量$A$を測定した際に、
         測定値$a^{n}$が得られる確率を予言することができる。
@@ -145,7 +145,7 @@
     （加筆予定）以上の手続きだけでは$\widehat{A}$の形に不定性が残り、場合によっては現実に合う結果を与えない。
     量子力学が古典力学を包括しているのであり、古典力学から量子力学を完全に類推するには情報量が足りないのは当然である。
     <h2>交換関係とポアソン括弧</h2>
-    （加筆予定）交換関係とポアソン括弧が対応している。すなわち、ハイゼンベルク方程式とポアソン括弧による物理量の時間発展が対応している（対応原理）。
+    （加筆予定）交換関係とポアソン括弧が対応している。すなわちハイゼンベルク方程式とポアソン括弧による物理量の時間発展が対応している（対応原理）。
 
     </p>
     <!--
@@ -208,8 +208,8 @@
     = \sum_{j} \left( \sum_{i} A^{i}_{j}\psi^{j} \ket{e_{i}} \right)
     \]
     とできる。$\left( i,j \right)$成分を$A^{i}_{j}$とした。$\left( i \times j \right)$個の項があるので成分の添字が2つ必要となる。
-    この成分は$\widehat{A}$由来であって2つの添字で区別される量である。つまり、$\widehat{A}$の行列表示とみなせる。
-    また、上の式は行列とベクトルの積の定義そのものの形をしている。すなわち、$\widehat{A}$を$\ket{\psi}$に作用させるということは、
+    この成分は$\widehat{A}$由来であって2つの添字で区別される量である。つまり$\widehat{A}$の行列表示とみなせる。
+    また、上の式は行列とベクトルの積の定義そのものの形をしている。すなわち$\widehat{A}$を$\ket{\psi}$に作用させるということは、
     行列$\widehat{A}$とベクトル$\ket{\psi}$の積を取ることだとみなせる。
     </p>
     <p>
@@ -221,7 +221,7 @@
         \[
         \mel*{e^{i}}{\widehat{A}}{e_{j}} = \sum_{i}A^{i}_{j}\braket*{e^{i}}{e_{j}} = A^{i}_{j}
         \]
-        となり、成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
+        となり成分$A^{i}_{j}$の具体的な値を計算できる。演算子を行列表示した成分を行列要素と呼ぶことがある。
     </p>
     <p>ここで、$\widehat{A}$を改めて行列として表示しておく。
         \[
@@ -258,7 +258,7 @@
         量子力学の教科書にはよく「エルミート行列は適当なユニタリ変換のもと実数の対角行列に対角化できる」という文言が書いてあるのだが、これは上記の内容を保証している。<br>
     <p>
         なお、正準交換関係を満たす$\widehat{q}$と$\widehat{p}$の具体的な表現を探すと、複素数の成分を持つ無限次元の行列が見つかる（証明略）。
-        よって、$\widehat{q}$と$\widehat{p}$の関数である物理量$\widehat{A}\left(
+        よって$\widehat{q}$と$\widehat{p}$の関数である物理量$\widehat{A}\left(
         \widehat{q},\widehat{p}\right)$を考える際も無限次元の行列を扱うことになる。ただし、これはすべての物理量が無限次元であることを意味しない。$\widehat{q}$と$\widehat{p}$の関数になっておらず、また有限次元の行列で表される物理量を考えることもできる。<br>
     </p>
 
@@ -314,13 +314,13 @@
     <h2>一般的の場合の解法</h2>
     （未着手）
     <h2>因数分解法(Factorization Method)による固有値問題の解法</h2>
-    自己共役演算子$A$の$n$番目に大きい固有値を$a_{n}$としたとき、以下の操作により固有値を求めることができる。
+    エルミート演算子$A$の$n$番目に大きい固有値を$a_{n}$としたとき、以下の操作により固有値を求めることができる。
     <ol>
         <li>演算子$A_0$を$A_0=A$で定義する。この$A_0$をどうにかして以下のように変形する。
             \[
             A_0 = \theta_0^\dagger \theta_0 + c_0
             \]
-            ここで、$\theta_0$は変形の結果得られた自己共役とは限らない線形演算子とし、$c_0$は実数とする。このような変形の仕方が複数ある場合には、$c_0$が最大になるように選ぶ。
+            ここで、$\theta_0$は変形の結果得られたエルミートとは限らない線形演算子とし、$c_0$は実数とする。このような変形の仕方が複数ある場合には、$c_0$が最大になるように選ぶ。
         </li>
         <li>次に、$A_0$の中の$\theta_0^\dagger \theta_0$の部分をひっくり返して
             \[
@@ -344,10 +344,10 @@
     <h2>因数分解法(Factorization Method)による固有値問題の解法の証明</h2>
     <h3>H.S.Greenの証明</h3>
     <p>
-        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrix Mechanics" P. Noordhoef Ltd. Groningen (1965))では以下のように証明されている。
+        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrix Mechanics" <i>P. Noordhoef Ltd., Groningen</i> (1965))では以下のように証明されている。
     </p>
     <p>
-        自己共役演算子$A$の$n$番目に大きい固有値を$a_{n}$、これに対応する規格化された固有ベクトルを$\ket{a_n}$としたとき、
+        エルミート演算子$A$の$n$番目に大きい固有値を$a_{n}$、これに対応する規格化された固有ベクトルを$\ket{a_n}$としたとき、
         ベクトル$\ket{\phi_{0,n}}$を
         \[
         \ket{\phi_{m,n}} = \theta_m\theta_{m-1}\cdots\theta_1\theta_0 \ket{a_{n}}
@@ -371,14 +371,14 @@
 
         \begin{aligned}
 
-        A_{j+1}\theta_m &= \left( \theta_m\theta_m^\dagger + c_m \right)\theta_m \\
+        A_{m+1}\theta_m &= \left( \theta_m\theta_m^\dagger + c_m \right)\theta_m \\
         &=\theta_m\left(\theta_m^\dagger\theta_m+c_m\right) \\
-        &=\theta_m A_m        
+        &=\theta_m A_m
 
         \end{aligned}
 
         このことから、$\bra*{\phi_{1,n}}\ket*{\phi_{1,n}}$を計算してみると、
-        
+
         \begin{aligned}
         \bra*{\phi_{1,n}}\ket*{\phi_{1,n}}
         &= \bra{a^n}\theta_0^\dagger\theta_1^\dagger\theta_1\theta_0 \ket{a_{n}} \\
@@ -389,94 +389,126 @@
         &= \left( a_n - c_1 \right)\left( a_n - c_0 \right) \geq 0
         \end{aligned}
         となって、$a_n=c_0$でないならば$a_n \geq c_1$である。$c_0$よりも小さい固有値は存在しないのだから、もし$c_1$が固有値になればこれは$c_0$よりも大きい。
-        <p>
-            以降同様に、
-            \begin{aligned}
-            \bra*{\phi_{m,n}}\ket*{\phi_{m,n}}
-            &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger\theta_m^\dagger\theta_m \theta_{m-1} \cdots \theta_0 \ket{a_{n}} \\
-            &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger \left( A_m - c_m \right)  \theta_{m-1} \cdots \theta_0 \ket{a_{n}} \\
-            &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger\theta_{m-1} \cdots \theta_0  \left( A_0 - c_m \right) \ket{a_{n}} \\
-            &= \left( a_n - c_m \right)\bra*{\phi_{m-1,n}}\ket*{\phi_{m-1,n}} \\
-            &= \left( a_n - c_m \right)\left( a_n - c_{m-1} \right) \cdots \left( a_n - c_0 \right)\geq 0
-            \end{aligned}
-            が得られる。すなわち、$\left( a_n - c_m \right)\left( a_n - c_{m-1} \right) \cdots \left( a_n - c_0 \right) = 0$もしくは$a_n > c_m$ある。
-            よって、固有値$a_n$は$c_0,c_1,c_2, \cdots, c_m$のどれかであるか、$c_m$よりも大きい値でなければならない。
-            もし、$A_m$から$A_{m+1}$を作る操作を無限に繰り返すことができれば結局、$a_n$は$c_m$のどれかでなければならない。
-            また、$c_{m+1} > c_m-1$であって、$c_m$の大きさは添字の順番と対応する。
-        </p>
-        <h3>本当に十分か？</h3>
-        <p>
-            Greenは以上を以ってすべての固有値が決定されるとしているのだが、上記は$c_m$が固有値となる必要条件であって
-            十分条件になっていないように思える。固有値となり得ない余計な値を含む可能性があるのではないだろうか。
-        </p>
-        <p>これに関して私は完全な納得を得ていない。ただし、少なくとも$c_0$が最小固有値$a_0$と一致する必要十分条件が、
-            $\theta_0 \ket{\chi} = 0$であるベクトル$\ket{\chi}$が存在することであることは以下のように示せる。
-        </p>
-        <p>もし、$\theta_0 \ket{\chi} = 0$であるベクトル$\ket{\chi}$が存在すれば、</p>
+    <p>
+        以降同様に、
         \begin{aligned}
-        \left( A_0 - c_0 \right)\ket{\chi} = \theta_0^\dagger\theta_0 \ket{\chi} &= 0\\
+        \bra*{\phi_{m,n}}\ket*{\phi_{m,n}}
+        &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger\theta_m^\dagger\theta_m \theta_{m-1} \cdots \theta_0
+        \ket{a_{n}} \\
+        &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger \left( A_m - c_m \right) \theta_{m-1} \cdots \theta_0
+        \ket{a_{n}} \\
+        &= \bra{a^n}\theta_0^\dagger \cdots \theta_{m-1}^\dagger\theta_{m-1} \cdots \theta_0 \left( A_0 - c_m \right)
+        \ket{a_{n}} \\
+        &= \left( a_n - c_m \right)\bra*{\phi_{m-1,n}}\ket*{\phi_{m-1,n}} \\
+        &= \left( a_n - c_m \right)\left( a_n - c_{m-1} \right) \cdots \left( a_n - c_0 \right)\geq 0
         \end{aligned}
-        であるから、
-        \[
-            A_0\ket{\chi} = c_0\ket{\chi} 
-        \]
-        となって、$\ket{\chi}$は$c_0$を固有値とする$A_0 = A$の固有ベクトルとなっている。
-        $c_0$より小さい固有値は存在しないのだから、
-        \begin{aligned}
-        c_0 &= a_0 \\
-        \frac{1}{\left| \ket{\chi}\right|}\ket{\chi} &= \ket{a_0}
-        \end{aligned}
-        が言える。すなわち、$c_0$は最小固有値$a_{0}$に等しく、$\frac{1}{\left| \ket{\chi}\right|}\ket{\chi}$は$\ket{a_{0}}$に等しい。
+        が得られる。すなわち$\left( a_n - c_m \right)\left( a_n - c_{m-1} \right) \cdots \left( a_n - c_0 \right) = 0$もしくは$a_n >
+        c_m$ある。
+        よって固有値$a_n$は$c_0,c_1,c_2, \cdots, c_m$のどれかであるか、$c_m$よりも大きい値でなければならない。
+        もし、$A_m$から$A_{m+1}$を作る操作を無限に繰り返すことができれば結局、$a_n$は$c_m$のどれかでなければならない。
+        また$c_{m+1} > c_{m-1}$であって、$c_m$の大きさは添字の順番と対応する。
+    </p>
+    <h3>本当に十分か？</h3>
+    <p>
+        Greenは以上を以ってすべての固有値が決定されるとしているのだが、上記は$c_m$が固有値となる必要条件であって
+        十分条件になっていないように思える。固有値となり得ない余計な値を含む可能性があるのではないだろうか。
+    </p>
+    <p>これに関して私は完全な納得を得ていない。しかし、各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
+        すべての$c_m$が$a_m$に一致し、これに対応する固有ベクトル$\ket{a_m}$はベクトル
+        $\ket{\chi_m^\prime} = \theta_0^\dagger\theta_1^\dagger \cdots
+        \theta_{m-1}^\dagger\ket{\chi_m}$を規格化したものであることが以下のように示せる。
+    </p>
+    <p>例えばもし、$\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在すれば、</p>
+    \begin{aligned}
+    \left( A_0 - c_0 \right)\ket{\chi_0} = \theta_0^\dagger\theta_0 \ket{\chi_0} &= 0\\
+    \end{aligned}
+    であるから、
+    \[
+    A_0\ket{\chi_0} = c_0\ket{\chi_0}
+    \]
+    となって$\ket{\chi_0}$は$c_0$を固有値とする$A_0 = A$の固有ベクトルとなっている。
+    $c_0$より小さい固有値は存在しないのだから、
+    \begin{aligned}
+    c_0 &= a_0 \\
+    \frac{1}{\left| \ket{\chi_0}\right|}\ket{\chi_0} &= \ket{a_0}
+    \end{aligned}
+    が言える。すなわち$c_0$は最小固有値$a_{0}$に等しく、$\ket{a_0}$は$\ket{\chi_0}$を規格化したものに等しい。
     </p>
     <p>
-        この逆を考えて、もし$c_0$が最小固有値$a_0$と一致する、すなわち$a_0 - c_0 = 0$であるならば、
+        ついでにこの逆を考えて、もし$c_0$が最小固有値$a_0$と一致する、すなわち$a_0 = c_0$であるならば、
         \begin{aligned}
         a_0 &= \mel*{a^0}{A}{a_0} \\
         &= \mel*{a^0}{\left( \theta_0^\dagger\theta_0 - c_0 \right)}{a_0} \\
-        &=  \mel*{a^0}{\theta_0^\dagger\theta_0}{a_0} + c_0 \\
+        &= \mel*{a^0}{\theta_0^\dagger\theta_0}{a_0} + c_0 \\
         \end{aligned}
         であるから、
         \[
         \mel*{a^0}{\theta_0^\dagger\theta_0}{a_0} = a_0 - c_0 = 0
         \]
-        となって、$\theta_0 \ket{\chi} = 0$であるベクトル$\ket{\chi} = \ket{a_0}$が存在している。よって$c_0$が最小固有値$a_0$と一致する必要十分条件が、
-        $\theta_0 \ket{\chi} = 0$であるベクトル$\ket{\chi}$が存在することであると示せた。
-       </p>
-    <p>また、これを踏まえて$c_0$が最大になるよう選ぶ理由も以下のように示せる。いま、$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0^\prime > c_0$となる$c_0^\prime$があるとき、
-            \begin{aligned} A_0 =\theta_0^{\prime\dagger}\theta_0^{\prime} +
-            c_0^\prime \end{aligned} で$\theta_0^{\prime}$を定義する。ここで、$\theta_0
-            \ket{\chi}=0$となるベクトル$\ket{\chi}$が存在すると仮定すると、 \begin{aligned} \mel*{\chi}{A_0}{\chi} &=\mel*{\chi}{\left(
-            \theta_0^\dagger \theta_0 + c_0 \right)}{\chi}=c_0 \braket*{\chi}{\chi} \\ &=\mel*{\chi}{\left(
-            \theta_0^{\prime\dagger} \theta_0^\prime + c_0^\prime
-            \right)}{\chi}=\mel*{\chi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\chi} + c_0^\prime \braket*{\chi}{\chi}
-            \end{aligned} なので \begin{aligned} \mel*{\chi}{\theta_0^{\prime\dagger}\theta_0^\prime}{\chi} &=\left( -c_0^\prime +
-            c_0 \right) \braket*{\chi}{\chi} < 0 \qquad\because c_0^\prime > c_0 \end{aligned}
-            となって$\theta_0^\prime\ket{\chi}$のノルムの二乗が負になってしまう。よって、 $\theta_0 \ket{\chi}=0$となる$\ket{\chi}$が存在しないことになり、
-            $c_0$は最大になるよう選ぶ必要があることが分かる。 <p>
+        となって$\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0} = \ket{a_0}$が存在している。
+        結局$c_0$が$A=A_0$の最小固有値$a_0$と一致する必要十分条件が、
+        $\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在することであることが言える。
     </p>
-    <h3>固有ベクトル</h3>
+    <p>また、これを踏まえて$c_0$が最大になるよう選ぶ理由も以下のように示せる。いま$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0^\prime > c_0$となる$c_0^\prime$があるとき、
+        \begin{aligned} A_0 =\theta_0^{\prime\dagger}\theta_0^{\prime} +
+        c_0^\prime \end{aligned} で$\theta_0^{\prime}$を定義する。ここで$\theta_0
+        \ket{\chi_0}=0$となるベクトル$\ket{\chi_0}$が存在すると仮定すると
 
-    <h2>シュレディンガー方程式との関係</h2>
-    （未着手）
-    <h1>ハイゼンベルクの不確定性原理</h1>
-    （未着手）
-    <h1>外部自由度と内部自由度</h1>
-    （未着手）
-    <h1>調和振動子</h1>
-    <h2>天下り的な解法</h2> （未着手）
-    <h2>演繹的な解法</h2> （未着手）
-    <h2>物理的考察</h2> （未着手）
-    <h1>角運動量</h1> （未着手）
+        \begin{aligned} \mel*{\chi_0}{A_0}{\chi_0} &=\mel*{\chi_0}{\left(
+        \theta_0^\dagger \theta_0 + c_0 \right)}{\chi_0}=c_0 \braket*{\chi_0}{\chi_0} \\ &=\mel*{\chi_0}{\left(
+        \theta_0^{\prime\dagger} \theta_0^\prime + c_0^\prime
+        \right)}{\chi_0}=\mel*{\chi_0}{\theta_0^{\prime\dagger}\theta_0^\prime}{\chi_0} + c_0^\prime
+        \braket*{\chi_0}{\chi_0}
+        \end{aligned}
+        なので
+        \begin{aligned} \mel*{\chi_0}{\theta_0^{\prime\dagger}\theta_0^\prime}{\chi_0} &=\left( -c_0^\prime +
+        c_0 \right) \braket*{\chi_0}{\chi_0} < 0 \qquad\because c_0^\prime> c_0
+            \end{aligned}
 
-    <h1>スピン角運動量と軌道角運動量</h1> （未着手）
+            となって$\theta_0^\prime\ket{\chi_0}$のノルムの二乗が負になってしまう。よって$\theta_0 \ket{\chi_0}=0$となる$\ket{\chi_0}$が存在しないことになり
+            $c_0$は最大になるよう選ぶ必要があることが分かる。 <p>
+            </p>
+            <p>
+                以降同様にして、$c_m$が$A_m$の固有値$a_m$(実は$A_m$の最小固有値となっている)と一致する必要十分条件が、
+                $\theta_m \ket{\chi_m} = 0$であるベクトル$\ket{\chi_m}$が存在することであって、$A_m$の固有値$a_m$に対応する固有ベクトルは$\ket{\chi_m}$であると言える。(ここちょっと論理の飛躍があって、$A_m$の固有値が$A$の固有値になっていることを言えていない)</p>
+            <p>
+                さらに、$\ket{\chi_m^\prime} = 
+                \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}$
+                とすると、$A_m\theta_m^\dagger = \theta_{m}A_{m+1}$であることを使って、
 
-    <h1>水素様原子</h1> （未着手）
+                \begin{aligned}
+                    A\ket{\chi_m^\prime}
+                    &= A_0\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
+                    &= \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger A_m\ket{\chi_m}\\
+                    &= a_m\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
+                    &= a_m\ket{\chi_m^\prime}
 
-    <h1>二原子分子</h1> （未着手）
+                \end{aligned}
 
-    <h1>電磁場の量子化</h1> （未着手）
+                となって結局、$A$の固有値$a_m = c_m$と固有ベクトル$\ket{a_m} = \ket{\chi_m^\prime}$が完全に決定される。
+            </p>
 
-    <h1>相対論的量子力学</h1> （未着手）
+            <h2>シュレディンガー方程式との関係</h2>
+            （未着手）
+            <h1>ハイゼンベルクの不確定性原理</h1>
+            （未着手）
+            <h1>外部自由度と内部自由度</h1>
+            （未着手）
+            <h1>調和振動子</h1>
+            <h2>天下り的な解法</h2> （未着手）
+            <h2>演繹的な解法</h2> （未着手）
+            <h2>物理的考察</h2> （未着手）
+            <h1>角運動量</h1> （未着手）
+
+            <h1>スピン角運動量と軌道角運動量</h1> （未着手）
+
+            <h1>水素様原子</h1> （未着手）
+
+            <h1>二原子分子</h1> （未着手）
+
+            <h1>電磁場の量子化</h1> （未着手）
+
+            <h1>相対論的量子力学</h1> （未着手）
 </body>
 
 </html>
