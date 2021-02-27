@@ -35,11 +35,11 @@
     <ol>
         <li>状態はヒルベルト空間上の規格化されたベクトル$|\psi\rangle$で表される。</li>
         <li>物理量はヒルベルト空間上のエルミート演算子$\widehat{A}$によって表される。</li>
-        <li>物理量$\widehat{A}$の時間発展はハミルトニアン演算子を$\widehat{H}$として以下のハイゼンベルク方程式に従う。
+        <li>閉じた系において物理量$\widehat{A}$の時間発展は以下のハイゼンベルク方程式に従う。
             \[
             \mathrm{i}\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
             \]
-            なお上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
+            ここで$\widehat{H}$はハミルトニアン演算子であり系のエネルギー$E$に対応する。なお上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
             その場合は下記のシュレディンガー方程式に従うと考える。
             \[
             \mathrm{i}\hbar \dfrac{\mathrm{d}}{\mathrm{d}t}| \psi \rangle = \widehat{H}| \psi \rangle
@@ -343,7 +343,7 @@
     <h2>因数分解法(Factorization Method)による固有値問題の解法の証明</h2>
     <h3>H.S.Greenの証明</h3>
     <p>
-        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrix Mechanics" <i>P. Noordhoef Ltd., Groningen</i> (1965))では以下のように証明されている。
+        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrics Mechanics" <i>P. Noordhoef Ltd., Groningen</i> (1965))では以下のように証明されている。
     </p>
     <p>
         エルミート演算子$A$の$n$番目に大きい固有値を$a_{n}$、これに対応する規格化された固有ベクトルを$\ket{a_n}$としたとき、
@@ -464,7 +464,7 @@
         c_0 \right) \braket*{\chi_0}{\chi_0} < 0 \qquad\because c_0^\prime> c_0
             \end{aligned}
 
-            となって$\theta_0^\prime\ket{\chi_0}$のノルムの二乗が負になってしまう。よって$\theta_0 \ket{\chi_0}=0$となる$\ket{\chi_0}$が存在しないことになり
+            となって$\theta_0^{\prime}\ket{\chi_0}$のノルムの二乗が負になってしまう。よって$\theta_0^\prime \ket{\chi_0}=0$となる$\ket{\chi_0}$が存在しないことになり
             $c_0$は最大になるよう選ぶ必要があることが分かる。 <p>
             </p>
             <p>
@@ -495,9 +495,9 @@
             </p>
 
             <h2>ハミルトニアン演算子$H$での具体例</h2>
-            （メモ）ハミルトニアン演算子の場合には上記の手法でうまくいく。
-            $\theta_n = p - if_n(q)$として、$(p - if_n(q))\ket{\chi_n}=0$を
-            満たす$\ket{\chi_n}$を見つける問題になるが、シュレディンガー表示にすると線形微分方程式の解の存在性より$\ket{\chi_n}$は存在する。
+            （加筆予定）ハミルトニアン演算子の場合には上記の手法でうまくいく。シュレディンガー表示を考えると、
+            $\theta_n = -i\hbar d/dq - if_n(q)$として、$(-i\hbar d/dq - if_n(q))\ket{\chi_n}=0$を
+            満たす$\ket{\chi_n}$を見つける問題になるが、線形微分方程式の解の存在性より$\ket{\chi_n}$は存在する。
 
             <h1>ハイゼンベルクの不確定性原理</h1>
             （未着手）
