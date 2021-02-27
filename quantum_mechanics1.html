@@ -20,7 +20,7 @@
 
 <body>
     <h1>量子力学で何が分かるか</h1>
-    <p>人類はミクロなスケールにおいて未来を完全に予言することを諦め、ある程度のランダムさを理論の中に組み込むことを認めた。<br>
+    <p>人類はミクロなスケールにおいて未来を完全に予言することを諦め、ある程度のランダムさを理論の中に組み込むことを認めた。
         ではどこまで予言できるのか。以下の2つのことを予言できる。
     <ol>
         <li>ある特定の測定の結果として得られる測定値$a_n$を予言することはできないが、
@@ -31,23 +31,23 @@
     </ol>
     </p>
     <h1>量子力学の要請</h1>
-    <p>量子力学では以下の5つの要請を無条件に認める。<br>
+    <p>量子力学では以下の5つの要請を無条件に認める。
     <ol>
         <li>状態はヒルベルト空間上の規格化されたベクトル$|\psi\rangle$で表される。</li>
         <li>物理量はヒルベルト空間上のエルミート演算子$\widehat{A}$によって表される。</li>
         <li>物理量$\widehat{A}$の時間発展はハミルトニアン演算子を$\widehat{H}$として以下のハイゼンベルク方程式に従う。
             \[
-            i\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
+            \mathrm{i}\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A}
             \]
             なお上記では物理量が時間発展すると考えているが、状態$|\psi\rangle$が時間発展するとしても数学的に等価なモデルとなる。
             その場合は下記のシュレディンガー方程式に従うと考える。
             \[
-            i\hbar \dfrac{\mathrm{d}}{\mathrm{d}t}| \psi \rangle = \widehat{H}| \psi \rangle
+            \mathrm{i}\hbar \dfrac{\mathrm{d}}{\mathrm{d}t}| \psi \rangle = \widehat{H}| \psi \rangle
             \]
         </li>
-        <li>状態$|\psi\rangle$について物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、<br>
-            測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a_n$として得られる。<br>
-            どの固有値になるかを完全に予言することはできず、確率的にしか分からない。<br>
+        <li>状態$|\psi\rangle$について物理量$\widehat{A}$を誤差なく測定できたとすると（以降、理想測定とする）、
+            測定値はこれに対応する演算子$\widehat{A}$の固有値のどれか$a_n$として得られる。
+            どの固有値になるかを完全に予言することはできず、確率的にしか分からない。
             測定によりある測定値$a_n$が得られる確率$P(a_n)$は、$a_n$に対応する固有ベクトルの張る空間（以降、固有空間とする）を考え、
             この空間への状態ベクトル$|\psi\rangle$の射影を取り、この射影のノルムを二乗することで得られる。これをボルンの規則と呼ぶ。
             数式で表現すると固有空間への射影演算子を$\widehat{P}\left( a_n\right)$として以下の通り。
@@ -59,7 +59,7 @@
         縮退がない場合は$a_n$に対応する固有ベクトルを$\ket{a_{n}}$として
         $P\left( a_n\right) = \braket*{\psi}{a^{n}}\braket*{a_{n}}{\psi}
         = \left|\braket{a_{n}}{\psi}\right| ^{2}$となる。
-        <li>測定の直前に状態$|\psi\rangle$であった系に物理量$\widehat{A}$の理想測定を行い、<br>
+        <li>測定の直前に状態$|\psi\rangle$であった系に物理量$\widehat{A}$の理想測定を行い、
             測定値$a^{n}$が得られたとすると、測定の直後の状態$|\phi\rangle$は測定の直前の状態$|\psi\rangle$の固有空間への射影を規格化したものとなる。
             これを射影仮説と呼ぶ。数式にすると以下の通り。
             \[
@@ -76,7 +76,7 @@
     <p>
         上記の5つの要請は物理量$\widehat{A}$の具体的な形を与えてくれない。具体的な形は自然を観察することによって推定するしかないのだが、
         幸いなことに古典力学にて見いだされた物理量$A$に関しては以下の手続きによって演算子$\widehat{A}$に変換することで
-        多くの場合うまくいくことが経験的に知られている。ここで強調しておくが、量子力学のスケールで初めて見いだされた物理量については本当に適宜推定するしかない。<br>
+        多くの場合うまくいくことが経験的に知られている。ここで強調しておくが、量子力学のスケールで初めて見いだされた物理量については本当に適宜推定するしかない。
     </p>
     <p>
         簡単のために1自由度、すなわち1次元1粒子の場合を考える。演算子にしたい古典力学における実数の物理量$A$を、一般化座標$q$と一般化運動量$p$の関数として書き下す。
@@ -85,9 +85,9 @@
         \]
         このような物理量の$q$と$p$を、以下のような関係を満たすエルミート演算子$\widehat{p}$と$\widehat{q}$に置き換える。事実、このような$\widehat{p}$と$\widehat{q}$は存在する。
         \[
-        \widehat{q}\widehat{p}-\widehat{p}\widehat{q} = i\hbar\widehat{I}
+        \widehat{q}\widehat{p}-\widehat{p}\widehat{q} = \mathrm{i}\hbar\widehat{I}
         \]
-        ここで、$\widehat{I}$は恒等演算子である。右辺を単に$i\hbar$とすることもあるが、右辺も演算子であることを強調するために$\widehat{I}$をかけている。また、このような関係の成り立つ$\widehat{p}$と$\widehat{q}$は正準交換関係にあると言う。<br>
+        ここで、$\widehat{I}$は恒等演算子である。右辺を単に$\mathrm{i}\hbar$とすることもあるが、右辺も演算子であることを強調するために$\widehat{I}$をかけている。また、このような関係の成り立つ$\widehat{p}$と$\widehat{q}$は正準交換関係にあると言う。
     </p>
     <p>
         これにより、古典力学における物理量$A\left( q,p\right)$は
@@ -109,7 +109,7 @@
         となる。この量のエルミート共役を取ると、
         \[
         \widehat{A}^\dagger = \left( \widehat{q}\widehat{p} \right)^\dagger = \widehat{p}^\dagger \widehat{q}^\dagger =
-        \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - i\hbar\widehat{I}
+        \widehat{p}\widehat{q} = \widehat{q}\widehat{p} - \mathrm{i}\hbar\widehat{I}
         \]
         よって
         \[
@@ -140,7 +140,7 @@
         測定値$a^{n}$が得られる確率を予言することができる。
     <h2>正準量子化の手続き（多自由度の場合）</h2>
     （加筆予定）$\left[ \widehat{q}_{\alpha} , \widehat{p}_{\beta} \right] =
-    i\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
+    \mathrm{i}\hbar\delta_{\alpha\beta}\widehat{I}$と仮定する以外は同じである。
     <h2>正準量子化の不完全さ</h2>
     （加筆予定）以上の手続きだけでは$\widehat{A}$の形に不定性が残り、場合によっては現実に合う結果を与えない。
     量子力学が古典力学を包括しているのであり、古典力学から量子力学を完全に類推するには情報量が足りないのは当然である。
@@ -153,35 +153,35 @@
         \[
         H=\dfrac{1}{2}m\dot{q}^{2}+V\left( q\right)
         \]
-        となる。ここで、 $\dot{q}=\dfrac{dq}{dt}$である。演算子であることを強調するハット$\widehat{}$を省略しているが、$H, q, \dot{q}$はすべて演算子であることに注意する。<br>
+        となる。ここで、 $\dot{q}=\dfrac{dq}{dt}$である。演算子であることを強調するハット$\widehat{}$を省略しているが、$H, q, \dot{q}$はすべて演算子であることに注意する。
     </p>
     <p>ここで、$q$をハイゼンベルク方程式に$A=q$として代入すると、
        
         \[
-        i\hbar \dfrac{dq}{dt}=qH-Hq
+        \mathrm{i}\hbar \dfrac{dq}{dt}=qH-Hq
         \]
         であり、地道に計算すると
         \[
-        i\hbar \dot{q} = \frac{1}{2}m(q\dot{q}^2-\dot{q}^2q)
+        \mathrm{i}\hbar \dot{q} = \frac{1}{2}m(q\dot{q}^2-\dot{q}^2q)
         \]
         となる。天下り的だが、右辺に$\frac{1}{2}m\dot{q}q\dot{q}-\frac{1}{2}m\dot{q}q\dot{q}$を足して項をまとめると、
         \[
-        i\hbar \dot{q} = \frac{1}{2}m(q\dot{q}-\dot{q}q)\dot{q}+\frac{1}{2}m\dot{q}(q\dot{q}-\dot{q}q)
+        \mathrm{i}\hbar \dot{q} = \frac{1}{2}m(q\dot{q}-\dot{q}q)\dot{q}+\frac{1}{2}m\dot{q}(q\dot{q}-\dot{q}q)
         \]
         とできる。運動量を$p=m\dot{q}$とすると、
         \[
-        i\hbar \dot{q} = \frac{1}{2}(qp-pq)\dot{q}+\frac{1}{2}\dot{q}(qp-pq)
+        \mathrm{i}\hbar \dot{q} = \frac{1}{2}(qp-pq)\dot{q}+\frac{1}{2}\dot{q}(qp-pq)
         \]
         となる。この式から、座標$q$と運動量$p$が以下の関係式を満たすことを見出すことができる。
         \[
         qp-pq = i \hbar I
         \]
-        右辺を単に$i\hbar$と書くことも多いが、右辺も演算子であるので、これを強調して恒等演算子$I$をかけている。
-        このように、$AB-BA=i\hbar I$となる関係を正準交換関係と呼ぶ。<br>
-        また、$AB-BA$という演算そのものを交換子と呼ぶ。交換子自身も演算子である。<br>
+        右辺を単に$\mathrm{i}\hbar$と書くことも多いが、右辺も演算子であるので、これを強調して恒等演算子$I$をかけている。
+        このように、$AB-BA=\mathrm{i}\hbar I$となる関係を正準交換関係と呼ぶ。
+        また、$AB-BA$という演算そのものを交換子と呼ぶ。交換子自身も演算子である。
     </p>
     <p>
-        交換子がゼロでない場合、演算子が交換しないという。このとき、数学的には2つの演算子が固有ベクトルを共有することがないことを示すことができる。<br>
+        交換子がゼロでない場合、演算子が交換しないという。このとき、数学的には2つの演算子が固有ベクトルを共有することがないことを示すことができる。
 
         このことは物理的には次のように解釈される。ふたつの交換しない物理量$A$と$B$があって、片方の物理量$A$を観測したとき、系の状態ベクトルは$A$の固有ベクトルとなっており、もう片方の物理量$B$の固有ベクトルではない。このとき、物理量$B$がどの値を取っているかを量子力学は与えてくれないし、$B$は明確な値$b^{n}$など持っていないと考えることになっている。
     </p>
@@ -255,23 +255,23 @@
         \right]
 
         \]
-        量子力学の教科書にはよく「エルミート行列は適当なユニタリ変換のもと実数の対角行列に対角化できる」という文言が書いてあるのだが、これは上記の内容を保証している。<br>
+        量子力学の教科書にはよく「エルミート行列は適当なユニタリ変換のもと実数の対角行列に対角化できる」という文言が書いてあるのだが、これは上記の内容を保証している。
     <p>
         なお、正準交換関係を満たす$\widehat{q}$と$\widehat{p}$の具体的な表現を探すと、複素数の成分を持つ無限次元の行列が見つかる（証明略）。
         よって$\widehat{q}$と$\widehat{p}$の関数である物理量$\widehat{A}\left(
-        \widehat{q},\widehat{p}\right)$を考える際も無限次元の行列を扱うことになる。ただし、これはすべての物理量が無限次元であることを意味しない。$\widehat{q}$と$\widehat{p}$の関数になっておらず、また有限次元の行列で表される物理量を考えることもできる。<br>
+        \widehat{q},\widehat{p}\right)$を考える際も無限次元の行列を扱うことになる。ただし、これはすべての物理量が無限次元であることを意味しない。$\widehat{q}$と$\widehat{p}$の関数になっておらず、また有限次元の行列で表される物理量を考えることもできる。
     </p>
 
     <h1>時間発展</h1>
     <h2>演算子（=物理量の行列）の時間発展</h2>
     <p>
         これまで物理量の演算子にハット$\widehat{ }$をつけて演算子であることを強調してきたが、実際に計算を進めていく上では煩雑であるため、以降省略する。
-        また、演算子の表現に具体的なイメージを持って計算を進めるべく、以降断りなく演算子を行列として扱うことがある。<br>
+        また、演算子の表現に具体的なイメージを持って計算を進めるべく、以降断りなく演算子を行列として扱うことがある。
     </p>
     <p>
         物理量の演算子$A\left( t \right)$の時間発展のもう少し具体的な形を考えたい。時間発展はハイゼンベルク方程式
         \[
-        i\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=A\left( t \right)H-HA\left( t \right)
+        \mathrm{i}\hbar \dfrac{\mathrm{d}A\left( t \right)}{\mathrm{d}t}=A\left( t \right)H-HA\left( t \right)
         \]
         により与えられるのだった。この方程式は簡単に解けて、
         \[
@@ -300,7 +300,7 @@
         もちろん、全系を考えればエネルギーは保存するはずなので理論の不完全さを意味するわけではない。それでも、もしこのような系を扱いたいのであれば、
 
         \[
-        i\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A} + i\hbar \dfrac{\partial A}{\partial t}
+        \mathrm{i}\hbar \dfrac{\mathrm{d}\widehat{A}}{\mathrm{d}t}=\widehat{A}\widehat{H}-\widehat{H}\widehat{A} + \mathrm{i}\hbar \dfrac{\partial A}{\partial t}
         \]
 
         とすればよいことが見いだされており、こちらをハイゼンベルク方程式と呼ぶこともある。
@@ -338,7 +338,6 @@
             &= \theta_{n+1} \theta_{n+1}^\dagger + c_{n+1}
             \end{aligned}
             を作っていくと、実は$c_n = a_{n}$となっており、$a_{n}$が決定されたことになる。
-            <!-- ただし、$\theta_0 \ket{\psi}=0$となるベクトル$\ket{\psi}$が存在しなければならない。 -->
         </li>
     </ol>
     <h2>因数分解法(Factorization Method)による固有値問題の解法の証明</h2>
@@ -469,27 +468,37 @@
             $c_0$は最大になるよう選ぶ必要があることが分かる。 <p>
             </p>
             <p>
-                以降同様にして、$c_m$が$A_m$の固有値$a_m$(実は$A_m$の最小固有値となっている)と一致する必要十分条件が、
-                $\theta_m \ket{\chi_m} = 0$であるベクトル$\ket{\chi_m}$が存在することであって、$A_m$の固有値$a_m$に対応する固有ベクトルは$\ket{\chi_m}$であると言える。(ここちょっと論理の飛躍があって、$A_m$の固有値が$A$の固有値になっていることを言えていない)</p>
+                以降同様にして、もし$\theta_m\ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
+
+                \begin{aligned}
+                    \left( A_m - c_m \right)\ket{\chi_m} = \theta_m^\dagger\theta_m\ket{\chi_m} = 0
+                \end{aligned}
+            なので、
+                \begin{aligned}
+                    A_m\ket{\chi_m} = c_m\ket{\chi_m}
+                \end{aligned}
+            となって、$c_m$は$A_m$の固有値であり、$\ket{\chi_m}$が対応する固有ベクトルである。
             <p>
                 さらに、$\ket{\chi_m^\prime} = 
                 \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}$
-                とすると、$A_m\theta_m^\dagger = \theta_{m}A_{m+1}$であることを使って、
+                とすると、$A_m\theta_m^\dagger = \theta_{m}^\dagger A_{m+1}$であることを使って、
 
                 \begin{aligned}
                     A\ket{\chi_m^\prime}
                     &= A_0\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
                     &= \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger A_m\ket{\chi_m}\\
-                    &= a_m\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
-                    &= a_m\ket{\chi_m^\prime}
-
+                    &= c_m\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
+                    &= c_m\ket{\chi_m^\prime}
                 \end{aligned}
 
-                となって結局、$A$の固有値$a_m = c_m$と固有ベクトル$\ket{a_m} = \ket{\chi_m^\prime}$が完全に決定される。
+                となって結局、$A$の固有値$a_m = c_m$と固有ベクトル$\ket{a_m} = \frac{1}{\left| \ket{\chi_m^\prime}\right| }\ket{\chi_m^\prime}$が完全に決定される。
             </p>
 
-            <h2>シュレディンガー方程式との関係</h2>
-            （未着手）
+            <h2>ハミルトニアン演算子$H$での具体例</h2>
+            （メモ）ハミルトニアン演算子の場合には上記の手法でうまくいく。
+            $\theta_n = p - if_n(q)$として、$(p - if_n(q))\ket{\chi_n}=0$を
+            満たす$\ket{\chi_n}$を見つける問題になるが、シュレディンガー表示にすると線形微分方程式の解の存在性より$\ket{\chi_n}$は存在する。
+
             <h1>ハイゼンベルクの不確定性原理</h1>
             （未着手）
             <h1>外部自由度と内部自由度</h1>
