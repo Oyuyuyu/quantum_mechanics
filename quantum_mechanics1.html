@@ -9,7 +9,7 @@
             },
             tex: {
                 inlineMath: [['$', '$']],
-                packages: { '[+]': ['physics'] }
+                packages: { '[+]': ['physics'] },
             }
         };
     </script>
@@ -367,7 +367,7 @@
     </p>
     <p>
         先へ進む前に、以下が成り立つことを確認しておく。
-[]
+
         \begin{aligned}
 
         A_{m+1}\theta_m &= \left( \theta_m\theta_m^\dagger + c_m \right)\theta_m \\
@@ -407,15 +407,15 @@
         もし、$A_m$から$A_{m+1}$を作る操作を無限に繰り返すことができれば結局、$a_n$は$c_m$のどれかでなければならない。
         また$c_{m+1} > c_{m-1}$であって、$c_m$の大きさは添字の順番と対応する。
     </p>
-    <h3>本当に十分か？</h3>
+    <h3>十分条件の考察</h3>
     <p>
-        Greenは以上を以ってすべての固有値が決定されるとしているのだが、上記は$c_m$が固有値となる必要条件であって
-        十分条件になっていないように思える。固有値となり得ない余計な値を含む可能性があるのではないだろうか。
+        Greenは以上をもってすべての固有値が決定されるとしているのだが、上記は$c_m$が固有値となる必要条件であって
+        十分条件になっていないように思える。固有値ではない余計な値を含まないだろうか。あるいはここに現れない固有値は存在しないのだろうか。
     </p>
-    <p>これに関して私は完全な納得を得ていない。しかし、各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
+    <p>この疑問に対し、まずは以下のような答えを返すことができる。少なくとも、各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
         すべての$c_m$が$a_m$に一致し、これに対応する固有ベクトル$\ket{a_m}$はベクトル
         $\ket{\chi_m^\prime} = \theta_0^\dagger\theta_1^\dagger \cdots
-        \theta_{m-1}^\dagger\ket{\chi_m}$を規格化したものであることが以下のように示せる。
+        \theta_{m-1}^\dagger\ket{\chi_m}$を規格化したものである。
     </p>
     <p>例えばもし、$\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在すれば、</p>
     \begin{aligned}
@@ -448,7 +448,7 @@
         結局$c_0$が$A=A_0$の最小固有値$a_0$と一致する必要十分条件が、
         $\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在することであることが言える。
     </p>
-    <p>また、これを踏まえて$c_0$が最大になるよう選ぶ理由も以下のように示せる。いま$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0^\prime > c_0$となる$c_0^\prime$があるとき、
+    <p>これをふまえて、$c_0$が最大になるよう選ぶ理由も以下のように示せる。いま$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0^\prime > c_0$となる$c_0^\prime$があるとき、
         \begin{aligned} A_0 =\theta_0^{\prime\dagger}\theta_0^{\prime} +
         c_0^\prime \end{aligned} で$\theta_0^{\prime}$を定義する。ここで$\theta_0
         \ket{\chi_0}=0$となるベクトル$\ket{\chi_0}$が存在すると仮定すると
@@ -467,38 +467,29 @@
             となって$\theta_0^{\prime}\ket{\chi_0}$のノルムの二乗が負になってしまう。よって$\theta_0 \ket{\chi_0}=0$となる$\ket{\chi_0}$が存在しないことになり
             $c_0$は最大になるよう選ぶ必要があることが分かる。 <p>
             </p>
+
+
             <p>
-                以降同様にして、もし$\theta_m\ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
-
+                ところで、$\theta_0 \ket{a_0} = 0$なのだから核空間$\rm{Ker}\left( \theta_0 \right)$を考えてみたくなるが、これは上記の議論より$\ket{a_0}$だけが張る一次元空間になっているだろう。すると像空間$\rm{Im} \left( \theta_0 \right)$は$\{ \ket{a_1}, \ket{a_2}, \ket{a_3}, \cdots\}$が張る空間になっていいて、$\{ \theta_0 \ket{a_1}, \theta_0 \ket{a_2}, \theta_0 \ket{a_3}, \cdots\}$の張る空間と一致する。
+                ここで、$\theta_0 \ket{a_n}$に$A_1$をかけてみると
                 \begin{aligned}
-                    \left( A_m - c_m \right)\ket{\chi_m} = \theta_m^\dagger\theta_m\ket{\chi_m} = 0
+                    A_1 \theta_0 \ket{a_n} &= \theta_0 A_0 \ket{a_n}\\
+                    &= a_n \theta_0 \ket{a_n}
                 \end{aligned}
-            なので、
-                \begin{aligned}
-                    A_m\ket{\chi_m} = c_m\ket{\chi_m}
-                \end{aligned}
-            となって、$c_m$は$A_m$の固有値であり、$\ket{\chi_m}$が対応する固有ベクトルである。
+                となっていて、$\rm{Im} \left( \theta_0 \right)$は$A_1$の固有空間になっている。したがって、$A_1$の固有値の全体は$\{a_1,a_2,a_3,\cdots \}$であって、$A_0$の固有値全体から最小固有値$a_0$を除いた集合であることが分かる。
+                あとは$A_0$の最小固有値が$c_0$であることを示した議論を繰り返せば、$\theta_1 \ket{\chi_1} = 0$を満たす$\ket{\chi_1}$が存在すればそれは$\theta_0 \ket{a_1}$に等しく、その固有値は$a_1$であり、これが$A_1$の最小固有値であって、$A_0=A$の2番目に小さい固有値であると結論できる。
+            </p>
             <p>
-                さらに、$\ket{\chi_m^\prime} = 
-                \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}$
-                とすると、$A_m\theta_m^\dagger = \theta_{m}^\dagger A_{m+1}$であることを使って、
-
-                \begin{aligned}
-                    A\ket{\chi_m^\prime}
-                    &= A_0\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
-                    &= \theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger A_m\ket{\chi_m}\\
-                    &= c_m\theta_0^\dagger\theta_1^\dagger \cdots\theta_{m-1}^\dagger\ket{\chi_m}\\
-                    &= c_m\ket{\chi_m^\prime}
-                \end{aligned}
-
-                となって結局、$A$の固有値$a_m = c_m$と固有ベクトル$\ket{a_m} = \frac{1}{\left| \ket{\chi_m^\prime}\right| }\ket{\chi_m^\prime}$が完全に決定される。
+                以降同様にして、もし各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、それは$\theta_{m-1} \ket{a_m}$に等しく、その固有値は$a_m$であり、これが$A_m$の最小固有値であって、$A_0=A$の$(m+1)$番目に小さい固有値であると結論できる。
             </p>
 
-            <h2>ハミルトニアン演算子$H$への応用。<h2></h2>
-                （めも）ハミルトニアン演算子の場合、シュレディンガー表示だと
-                $\theta\chi(q) = (-i\hbar d/dq + if(q))\chi(q)=0$を満たす$\chi(q)$を見つける問題になるが、
-                これは普通に解けて$y = (C/\hbar)\exp(\int f(q) dq)$。
-                なお$\hbar(df(q)/dq) + f^2(q) = 2mV(q) - a_n$
+            <h2>ハミルトニアン演算子$H$への応用<h2></h2>
+                （構想段階）ハミルトニアン演算子の場合、もしハミルトニアンを因数分解することができれば、
+                シュレディンガー表示だと
+                $\theta = -id/dq + if(q)$とできるだろう。そして、
+                $(df(q)/dq) + f^2(q) + V(q) = c$とできる$f(q)$を求める微分方程式を解くことになる。因数分解ができてしまえば$f(q)$は存在するだろう。$c$の候補が複数出てくるかもしれないが、これは境界条件によって一意に決まるわけで、$c$が最大になるようにとれば境界条件を満たしているだろう。最大でも満たしていなかったらそれはそもそも解自体が存在しないということである。
+                そして、$\theta\chi(q) = (-i d/dq + if(q))\chi(q)=0$を満たす$\chi(q)$を見つける問題になるが、
+                これは変数分離型なので普通に解けて$\chi(q) = C\exp(\int f(q) dq) \neq 0$。よって$f(q)$がどんな形をしていても存在する。結局、ハミルトニアンの場合は因数分解が可能であれば固有値と固有ベクトルが完全に決まる。なお、$f(q) = (d\psi/dq)/\psi$とすると、$\hbar(df(q)/dq) + f^2(q) + V(q) = c$という微分方程式がシュレディンガー方程式に帰着する。
             </h2>
   
 
