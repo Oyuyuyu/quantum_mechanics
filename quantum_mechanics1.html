@@ -470,26 +470,46 @@
 
 
             <p>
-                ところで、$\theta_0 \ket{a_0} = 0$なのだから核空間$\rm{Ker}\left( \theta_0 \right)$を考えてみたくなるが、これは上記の議論より$\ket{a_0}$だけが張る一次元空間になっているだろう。すると像空間$\rm{Im} \left( \theta_0 \right)$は$\{ \ket{a_1}, \ket{a_2}, \ket{a_3}, \cdots\}$が張る空間になっていいて、$\{ \theta_0 \ket{a_1}, \theta_0 \ket{a_2}, \theta_0 \ket{a_3}, \cdots\}$の張る空間と一致する。
+                ところで、$\theta_0 \ket{a_0} = 0$なのだから核空間$\rm{Ker}\left( \theta_0 \right)$を考えてみたくなるが、これは上記の議論より$\ket{a_0}$だけが張る一次元空間になっているだろう。すると像空間$\rm{Im} \left( \theta_0 \right)$は$\{ \ket{a_1}, \ket{a_2}, \ket{a_3}, \cdots\}$が張る空間になっていて、$\{ \theta_0 \ket{a_1}, \theta_0 \ket{a_2}, \theta_0 \ket{a_3}, \cdots\}$の張る空間と一致する。
                 ここで、$\theta_0 \ket{a_n}$に$A_1$をかけてみると
                 \begin{aligned}
                     A_1 \theta_0 \ket{a_n} &= \theta_0 A_0 \ket{a_n}\\
                     &= a_n \theta_0 \ket{a_n}
                 \end{aligned}
-                となっていて、$\rm{Im} \left( \theta_0 \right)$は$A_1$の固有空間になっている。したがって、$A_1$の固有値の全体は$\{a_1,a_2,a_3,\cdots \}$であって、$A_0$の固有値全体から最小固有値$a_0$を除いた集合であることが分かる。
+                であって、なんと$\rm{Im} \left( \theta_0 \right)$は$A_1$の固有空間になっている。この空間において$A_1$の固有値の全体は$\{a_1,a_2,a_3,\cdots \}$であって、$A_0$の固有値全体から最小固有値$a_0$を除いた集合であることが分かる。
                 あとは$A_0$の最小固有値が$c_0$であることを示した議論を繰り返せば、$\theta_1 \ket{\chi_1} = 0$を満たす$\ket{\chi_1}$が存在すればそれは$\theta_0 \ket{a_1}$に等しく、その固有値は$a_1$であり、これが$A_1$の最小固有値であって、$A_0=A$の2番目に小さい固有値であると結論できる。
             </p>
             <p>
                 以降同様にして、もし各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、それは$\theta_{m-1} \ket{a_m}$に等しく、その固有値は$a_m$であり、これが$A_m$の最小固有値であって、$A_0=A$の$(m+1)$番目に小さい固有値であると結論できる。
             </p>
+            <p>
+                さらに、$\ket{\chi_m} = \theta_{m-1} \ket{a_m}$という関係から、$\ket{a_m}=\left( \theta_{m-1}^{\dagger}\right)^{-1}\ket{\chi_m}$の形が作れそうである。実際、
+                \begin{aligned}
+                    \ket{\psi_m} &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                    &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\theta_{m-1}\ket{a_m}
+                \end{aligned}
+                を考えて、ここに$A_0$をかけると$A_m\theta_m^\dagger = \theta_m^\dagger A_{m+1}$を用いて、
+                \begin{aligned}
+                    A_0\ket{\psi_m} &= A_0\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                    &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger A_{m-1} \ket{\chi_m}\\
+                    &= a_m \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                    &= a_m \ket{\psi_m}
+                \end{aligned}
+                であるので、
+                \begin{aligned}
+                \ket{a_m} &= \ket{\psi_m}
+                =\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                \end{aligned}
+                とできる。言い換えるならば、もし$\ket{\chi_m}$の具体的な表示を得られれば、$\ket{a_m}$の具体的な表示を得ることができる。
 
-            <h2>ハミルトニアン演算子$H$への応用<h2></h2>
+            </p>
+            <h2>ハミルトニアン演算子$H$への応用</h2>
                 （構想段階）ハミルトニアン演算子の場合、もしハミルトニアンを因数分解することができれば、
                 シュレディンガー表示だと
                 $\theta = -id/dq + if(q)$とできるだろう。そして、
-                $(df(q)/dq) + f^2(q) + V(q) = c$とできる$f(q)$を求める微分方程式を解くことになる。因数分解ができてしまえば$f(q)$は存在するだろう。$c$の候補が複数出てくるかもしれないが、これは境界条件によって一意に決まるわけで、$c$が最大になるようにとれば境界条件を満たしているだろう。最大でも満たしていなかったらそれはそもそも解自体が存在しないということである。
+                $(df(q)/dq) + f^2(q) + V(q) = c$とできる$f(q)$を求める微分方程式を解くことになる。因数分解ができてしまえば$f(q)$は存在するだろう。$c$の候補が複数出てくるかもしれないが、これは境界条件によって一意に決まるわけで、境界条件を満たしているとすれば最大の$c$を取ったときに限られるであろう。最大の$c$でも満たしていなかったらそれはそもそも解自体が存在しないということである。
                 そして、$\theta\chi(q) = (-i d/dq + if(q))\chi(q)=0$を満たす$\chi(q)$を見つける問題になるが、
-                これは変数分離型なので普通に解けて$\chi(q) = C\exp(\int f(q) dq) \neq 0$。よって$f(q)$がどんな形をしていても存在する。結局、ハミルトニアンの場合は因数分解が可能であれば固有値と固有ベクトルが完全に決まる。なお、$f(q) = (d\psi/dq)/\psi$とすると、$\hbar(df(q)/dq) + f^2(q) + V(q) = c$という微分方程式がシュレディンガー方程式に帰着する。
+                これは変数分離型なので普通に解けて$\chi(q) = C\exp(\int f(q) dq) \neq 0$。よって$f(q)$がどんな形をしていても存在する。結局、ハミルトニアンの場合は因数分解が可能であれば固有値と固有ベクトルが完全に決まる。なお、$f(q) = (d\psi/dq)/\psi$とすると、$(df(q)/dq) + f^2(q) + V(q) = c$という微分方程式がシュレディンガー方程式に帰着する。
             </h2>
   
 
