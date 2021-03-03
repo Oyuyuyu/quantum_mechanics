@@ -343,7 +343,8 @@
     <h2>因数分解法(Factorization Method)による固有値問題の解法の証明</h2>
     <h3>H.S.Greenの証明</h3>
     <p>
-        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrix Mechanics" <i>P. Noordhoef Ltd., Groningen</i> (1965))では以下のように証明されている。
+        上記の方法が正しいことを証明したい。H.S.Greenの小冊子(H.S.Green "Matrix Mechanics" <i>P. Noordhoef Ltd., Groningen</i>
+        (1965))では以下のように証明されている。
     </p>
     <p>
         エルミート演算子$A$の$n$番目に大きい固有値を$a_{n}$、これに対応する規格化された固有ベクトルを$\ket{a_n}$としたとき、
@@ -412,10 +413,14 @@
         Greenは以上をもってすべての固有値が決定されるとしているのだが、上記は$c_m$が固有値となる必要条件であって
         十分条件になっていないように思える。固有値ではない余計な値を含まないだろうか。あるいはここに現れない固有値は存在しないのだろうか。
     </p>
-    <p>この疑問に対し、まずは以下のような答えを返すことができる。少なくとも、各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
+    <p>
+        この疑問に対し、まずは以下のような答えを返すことができる。少なくとも、各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、
         すべての$c_m$が$a_m$に一致し、これに対応する固有ベクトル$\ket{a_m}$はベクトル
         $\ket{\chi_m^\prime} = \theta_0^\dagger\theta_1^\dagger \cdots
         \theta_{m-1}^\dagger\ket{\chi_m}$を規格化したものである。
+    </p>
+    $\ket{\chi_m^\prime} = \theta_0^\dagger\theta_1^\dagger \cdots
+    \theta_{m-1}^\dagger\ket{\chi_m}$が固有ベクトルになっている。
     </p>
     <p>例えばもし、$\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在すれば、</p>
     \begin{aligned}
@@ -434,19 +439,17 @@
     が言える。すなわち$c_0$は最小固有値$a_{0}$に等しく、$\ket{a_0}$は$\ket{\chi_0}$を規格化したものに等しい。
     </p>
     <p>
-        ついでにこの逆を考えて、もし$c_0$が最小固有値$a_0$と一致する、すなわち$a_0 = c_0$であるならば、
+        ついでにこの逆を考えて、もし$c_0$が最小固有値$a_0$と一致する、すなわち$a_0 = c_0$ならば、
         \begin{aligned}
         a_0 &= \mel*{a^0}{A}{a_0} \\
-        &= \mel*{a^0}{\left( \theta_0^\dagger\theta_0 - c_0 \right)}{a_0} \\
-        &= \mel*{a^0}{\theta_0^\dagger\theta_0}{a_0} + c_0 \\
+        &= \mel*{a^0}{\left( \theta_0^dagger\theta_0 +c_0 \right)}{a_0} \\
+        &= \mel*{a^0}{\theta_0^dagger\theta_0}{a_0} + c_0\\
         \end{aligned}
         であるから、
         \[
-        \mel*{a^0}{\theta_0^\dagger\theta_0}{a_0} = a_0 - c_0 = 0
+        \mel*{a^0}{\theta_0^dagger\theta_0}{a_0} = a_0 - c_0 = 0
         \]
-        となって$\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0} = \ket{a_0}$が存在している。
-        結局$c_0$が$A=A_0$の最小固有値$a_0$と一致する必要十分条件が、
-        $\theta_0 \ket{\chi_0} = 0$であるベクトル$\ket{\chi_0}$が存在することであることが言える。
+        となって、$\theta_0\ket{\chi_0}であるベクトル$\ket{\chi_0}=\ket{a_0}$が存在している。結局、$c_0$が$A=A_0$の最小固有値$a_0$と一致する必要十分条件が、$\theta_0\ket{\chi_0}であるベクトル$\ket{\chi_0}が存在することであると言える。
     </p>
     <p>これをふまえて、$c_0$が最大になるよう選ぶ理由も以下のように示せる。いま$c_0$を最も大きくなるように選ばなかったとき、すなわち$c_0^\prime > c_0$となる$c_0^\prime$があるとき、
         \begin{aligned} A_0 =\theta_0^{\prime\dagger}\theta_0^{\prime} +
@@ -470,48 +473,60 @@
 
 
             <p>
-                ところで、$\theta_0 \ket{a_0} = 0$なのだから核空間$\rm{Ker}\left( \theta_0 \right)$を考えてみたくなるが、これは上記の議論より$\ket{a_0}$だけが張る一次元空間になっているだろう。すると像空間$\rm{Im} \left( \theta_0 \right)$は$\{ \ket{a_1}, \ket{a_2}, \ket{a_3}, \cdots\}$が張る空間になっていて、$\{ \theta_0 \ket{a_1}, \theta_0 \ket{a_2}, \theta_0 \ket{a_3}, \cdots\}$の張る空間と一致する。
+                ところで、$\theta_0 \ket{a_0} = 0$なのだから核空間$\rm{Ker}\left( \theta_0
+                \right)$を考えてみたくなるが、これは上記の議論より\{$\ket{a_0}\}$だけが張る空間になっているだろう（縮退がある場合は一次元空間とは限らないことを補足しておく）。すると像空間$\rm{Im} \left( \theta_0 \right)$は$\{
+                \ket{a_1}, \ket{a_2}, \ket{a_3}, \cdots\}$が張る空間になっていて、$\{ \theta_0 \ket{a_1}, \theta_0 \ket{a_2},
+                \theta_0 \ket{a_3}, \cdots\}$の張る空間と一致する。
                 ここで、$\theta_0 \ket{a_n}$に$A_1$をかけてみると
                 \begin{aligned}
-                    A_1 \theta_0 \ket{a_n} &= \theta_0 A_0 \ket{a_n}\\
-                    &= a_n \theta_0 \ket{a_n}
+                A_1 \theta_0 \ket{a_n} &= \theta_0 A_0 \ket{a_n}\\
+                &= a_n \theta_0 \ket{a_n}
                 \end{aligned}
-                であって、なんと$\rm{Im} \left( \theta_0 \right)$は$A_1$の固有空間になっている。この空間において$A_1$の固有値の全体は$\{a_1,a_2,a_3,\cdots \}$であって、$A_0$の固有値全体から最小固有値$a_0$を除いた集合であることが分かる。
-                あとは$A_0$の最小固有値が$c_0$であることを示した議論を繰り返せば、$\theta_1 \ket{\chi_1} = 0$を満たす$\ket{\chi_1}$が存在すればそれは$\theta_0 \ket{a_1}$に等しく、その固有値は$a_1$であり、これが$A_1$の最小固有値であって、$A_0=A$の2番目に小さい固有値であると結論できる。
+                であって、なんと$\rm{Im} \left( \theta_0 \right)$は$A_1$の固有空間になっている。この空間において$A_1$の固有値の全体は$\{a_1,a_2,a_3,\cdots
+                \}$であって、$A_0$の固有値全体から最小固有値$a_0$を除いた集合であることが分かる。
+                あとは$A_0$の最小固有値が$c_0$であることを示した議論を繰り返せば、$\theta_1 \ket{\chi_1} = 0$を満たす$\ket{\chi_1}$が存在すればそれは$\theta_0
+                \ket{a_1}$に等しく、その固有値は$a_1$であり、これが$A_1$の最小固有値であって、$A_0=A$の2番目に小さい固有値であると結論できる。
             </p>
             <p>
-                以降同様にして、もし各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、それは$\theta_{m-1} \ket{a_m}$に等しく、その固有値は$a_m$であり、これが$A_m$の最小固有値であって、$A_0=A$の$(m+1)$番目に小さい固有値であると結論できる。
+                以降同様にして、もし各々の$m$に対して、$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$が存在するならば、それは$\theta_{m-1}
+                \ket{a_m}$に等しく、その固有値は$a_m$であり、これが$A_m$の最小固有値であって、$A_0=A$の$(m+1)$番目に小さい固有値であると結論できる。
             </p>
             <p>
-                さらに、$\ket{\chi_m} = \theta_{m-1} \ket{a_m}$という関係から、$\ket{a_m}=\left( \theta_{m-1}^{\dagger}\right)^{-1}\ket{\chi_m}$の形が作れそうである。実際、
+                さらに、$\ket{\chi_m} = \theta_{m-1} \ket{a_m}$という関係から、$\ket{a_m}=\left(
+                \theta_{m-1}^{\dagger}\right)^{-1}\ket{\chi_m}$の形が作れそうである。実際、
                 \begin{aligned}
-                    \ket{\psi_m} &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
-                    &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\theta_{m-1}\ket{a_m}
+                \ket{\psi_m} &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\theta_{m-1}\ket{a_m}
                 \end{aligned}
                 を考えて、ここに$A_0$をかけると$A_m\theta_m^\dagger = \theta_m^\dagger A_{m+1}$を用いて、
                 \begin{aligned}
-                    A_0\ket{\psi_m} &= A_0\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
-                    &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger A_{m-1} \ket{\chi_m}\\
-                    &= a_m \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
-                    &= a_m \ket{\psi_m}
+                A_0\ket{\psi_m} &= A_0\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                &= \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger A_{m-1} \ket{\chi_m}\\
+                &= a_m \theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                &= a_m \ket{\psi_m}
                 \end{aligned}
                 であるので、
                 \begin{aligned}
+                \ket{a_0} &= \ket{x_0} \\
                 \ket{a_m} &= \ket{\psi_m}
-                =\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \\
+                =\theta_0^\dagger\theta_1^\dagger \cdots \theta_{m-1}^\dagger\ket{\chi_m} \qquad
+                \left( m \geq 1 \right) \\
                 \end{aligned}
                 とできる。言い換えるならば、もし$\ket{\chi_m}$の具体的な表示を得られれば、$\ket{a_m}$の具体的な表示を得ることができる。
 
             </p>
-            <h2>ハミルトニアン演算子$H$への応用</h2>
-                （構想段階）ハミルトニアン演算子の場合、もしハミルトニアンを因数分解することができれば、
-                シュレディンガー表示だと
-                $\theta = -id/dq + if(q)$とできるだろう。そして、
-                $(df(q)/dq) + f^2(q) + V(q) = c$とできる$f(q)$を求める微分方程式を解くことになる。因数分解ができてしまえば$f(q)$は存在するだろう。$c$の候補が複数出てくるかもしれないが、これは境界条件によって一意に決まるわけで、境界条件を満たしているとすれば最大の$c$を取ったときに限られるであろう。最大の$c$でも満たしていなかったらそれはそもそも解自体が存在しないということである。
-                そして、$\theta\chi(q) = (-i d/dq + if(q))\chi(q)=0$を満たす$\chi(q)$を見つける問題になるが、
-                これは変数分離型なので普通に解けて$\chi(q) = C\exp(\int f(q) dq) \neq 0$。よって$f(q)$がどんな形をしていても存在する。結局、ハミルトニアンの場合は因数分解が可能であれば固有値と固有ベクトルが完全に決まる。なお、$f(q) = (d\psi/dq)/\psi$とすると、$(df(q)/dq) + f^2(q) + V(q) = c$という微分方程式がシュレディンガー方程式に帰着する。
+            <h3>ハミルトニアン演算子$H$の場合</h3>
+            （加筆予定）では$\theta_m \ket{\chi_m} = 0$となるベクトル$\ket{\chi_m}$はいつでも存在するのだろうか。これは何とも言えない。演算子の形に依存する。
+            ハミルトニアン演算子の場合に限ると、シュレディンガー表示で
+            $\theta = -id/dq + if(q)$とできるだろう。そして、
+            $(df(q)/dq) + f^2(q) + V(q) =
+            c$とできる$f(q)$を求める微分方程式を解くことになる。因数分解ができてしまえば$f(q)$は存在するだろう。$c$の候補が複数出てくるかもしれないが、これは境界条件によって一意に決まるわけで、境界条件を満たしているとすれば最大の$c$を取ったときに限られるであろう。最大の$c$でも満たしていなかったらそれはそもそも解自体が存在しないということである。
+            そして、$\theta\chi(q) = (-i d/dq + if(q))\chi(q)=0$を満たす$\chi(q)$を見つける問題になるが、
+            これは変数分離型なので普通に解けて$\chi(q) = C\exp(\int f(q) dq) \neq
+            0$。よって$f(q)$がどんな形をしていても存在する。結局、ハミルトニアンの場合は最小固有値を持っていて、因数分解が可能であれば固有値と固有ベクトルが完全に決まる。なお、$f(q) =
+            (d\psi/dq)/\psi$とすると、$(df(q)/dq) + f^2(q) + V(q) = c$という微分方程式がシュレディンガー方程式に帰着する。
             </h2>
-  
+
 
             <h1>ハイゼンベルクの不確定性原理</h1>
             （未着手）
